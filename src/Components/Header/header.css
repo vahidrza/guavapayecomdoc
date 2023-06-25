@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #0B9A78;
+    padding: 10px 20px 10px 30px;
+    align-items: center;
+    color: #0B9A78;
+}
+
+.headerInfo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.headerChanges {
+    display: flex;
+}
+
+.headerChangesLanguage {
+    display: flex;
+    font-size: 1.3em;
+
+}
+
+.headerChangesPageMode {
+    display: flex;
+}
+
+.headerChangesLanguageOption {
+    padding: 6px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.headerLogo>a>img {
+    width: 76px;
+    height: 50px;
+    cursor: pointer;
+
+}
+
+.active {
+    border: 1px solid #0B9A78;
+    border-radius: 25%;
+    background-color: #D6EAE5;
+}
