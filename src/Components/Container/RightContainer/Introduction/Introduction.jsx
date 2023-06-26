@@ -2,17 +2,11 @@ import React, { useEffect } from "react";
 import "./introduction.css";
 import CopyAllIcon from "@mui/icons-material/CopyAll";
 
-function Introduction() {
+function Introduction({ CopyToClickBoard }) {
   useEffect(() => {
-    document.getElementById("copyIcon1").onclick = () => {
-      navigator.clipboard.writeText("https://testepg.guavapay.com");
-      alert("Successfully copied to Clickboard!");
-    };
-    document.getElementById("copyIcon2").onclick = () => {
-      navigator.clipboard.writeText("https://epg.guavapay.com");
-      alert("Successfully copied to Clickboard!");
-    };
-  }, []);
+    CopyToClickBoard("copyIcon1", "https://testepg.guavapay.com");
+    CopyToClickBoard("copyIcon2", "https://epg.guavapay.com");
+  });
 
   return (
     <div id="introduction" className="introduction">
@@ -22,10 +16,9 @@ function Introduction() {
         implemented as <span className="text-bold">HTTP</span> requests with{" "}
         <span className="text-bold">POST</span> method to specific{" "}
         <span className="text-bold">URL</span>. These are separate for each
-        individual request type.
-        The parameters used in the interactions are sent as parameters of{" "}
-        <span className="text-bold">POST</span> request; their values must be{" "}
-        <span className="text-bold">URL</span>-encoded.
+        individual request type. The parameters used in the interactions are
+        sent as parameters of <span className="text-bold">POST</span> request;
+        their values must be <span className="text-bold">URL</span>-encoded.
         <br />
         The result of processing a request returns as a{" "}
         <span className="text-bold">JSON</span> object, for example:

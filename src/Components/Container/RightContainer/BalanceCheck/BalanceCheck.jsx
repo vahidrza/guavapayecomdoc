@@ -2,15 +2,13 @@ import React, { useEffect } from "react";
 import "./balanceCheck.css";
 import CopyAllIcon from "@mui/icons-material/CopyAll";
 
-function BalanceCheck() {
+function BalanceCheck({ CopyToClickBoard }) {
   useEffect(() => {
-    document.getElementById("copyIcon7").onclick = () => {
-      navigator.clipboard.writeText(
-        "https://{base_url} /transaction/013/status?user=apiuser&password=apiuserpassword&sid=900000&mdorder=eed077dc-cad0-4ed5-8a15-608ffc592173"
-      );
-      alert("Successfully copied to Clickboard!");
-    };
-  }, []);
+    CopyToClickBoard(
+      "copyIcon7",
+      "https://{base_url}/merchant/013/balance?user={username}&password={password}&currency=840"
+    );
+  });
 
   return (
     <div id="balance" className="balanceCheck">

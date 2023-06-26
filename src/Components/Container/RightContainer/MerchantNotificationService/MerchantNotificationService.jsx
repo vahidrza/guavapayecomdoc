@@ -2,15 +2,13 @@ import React, { useEffect } from "react";
 import "./merchantNotificationService.css";
 import CopyAllIcon from "@mui/icons-material/CopyAll";
 
-function MerchantNotificationService() {
+function MerchantNotificationService({ CopyToClickBoard }) {
   useEffect(() => {
-    document.getElementById("copyIcon8").onclick = () => {
-      navigator.clipboard.writeText(
-        "https://{base_url} /transaction/013/status?user=apiuser&password=apiuserpassword&sid=900000&mdorder=eed077dc-cad0-4ed5-8a15-608ffc592173"
-      );
-      alert("Successfully copied to Clickboard!");
-    };
-  }, []);
+    CopyToClickBoard(
+      "copyIcon8",
+      "status=CREATED&description=No payment attempted yet.&amount=0.00&fee=0.00&orderId=5d696a3b-afb0-4111-b201-ea00bc68c862&code=-100&orderStatus=0&timestamp=2022-11-10 01:14:20&success=false&rrn&auth=-&currency=978&pan=&orderNumber=2022111021419470"
+    );
+  });
 
   return (
     <div id="notification" className="merchantNotificationService">
