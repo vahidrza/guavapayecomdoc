@@ -5,16 +5,21 @@ import Main from "./Main/Main";
 
 function Container() {
   useEffect(() => {
+    let components = document.getElementById("main").childNodes;
+    let listItems = document.getElementsByClassName("navListItem");
+
     for (let index = 0; index < 10; index++) {
-      document.getElementById("main").childNodes[index].onmouseover = () => {
-        document.getElementsByClassName("navListItem")[
-          index
-        ].style.backgroundColor = "#D6EAE5";
+      components[index].onmouseover = () => {
+        listItems[index].style.backgroundColor = "#D6EAE5";
       };
-      document.getElementById("main").childNodes[index].onmouseout = () => {
-        document.getElementsByClassName("navListItem")[
-          index
-        ].style.backgroundColor = "#FFF";
+      components[index].onmouseout = () => {
+        listItems[index].style.backgroundColor = "#FFF";
+      };
+      listItems[index].onmouseover = () => {
+        listItems[index].style.backgroundColor = "#D6EAE5";
+      };
+      listItems[index].onmouseout = () => {
+        listItems[index].style.backgroundColor = "#FFF";
       };
     }
   }, []);

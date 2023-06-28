@@ -19,10 +19,6 @@
     padding: 7.5%;
 }
 
-.navListItem:hover {
-    background-color: #D6EAE5;
-}
-
 .navListItem>a {
     color: #0B9A78;
     text-decoration: none;
