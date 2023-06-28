@@ -20,7 +20,7 @@ function Main() {
   }
 
   return (
-    <div className="main">
+    <div id="main" className="main">
       <Introduction CopyToClickBoard={CopyToClickBoard} />
       <OrderRegistrationRequest CopyToClickBoard={CopyToClickBoard} />
       <CheckThreedsVersionRequest CopyToClickBoard={CopyToClickBoard} />
