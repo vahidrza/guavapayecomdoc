@@ -5,27 +5,28 @@ function Refund() {
   return (
     <div id="refund" className="refund">
       <h1 className="componentHeading">Refund</h1>
+
+      <div className="text-bold-free">
+        Method:
+        <span className="text-url">{"{base_url}/epg/rest/refund.do"}</span>
+      </div>
+
       <p className="componentParagraph">
-        <span className="text-bold">{"Method: "}</span>
-        <span className="text-url">{"{base_url}/epg/rest/refund.do "}</span>
-        <br />
-        <br />A <span className="text-bold">refund.do</span> request is used to
-        refund deposited money. This request returns the funds paid for the
-        order back to the customer. <br /> The request results in an error if
-        the customer was not charged. Under NDA only the request allows multiple
-        refunds, but their total
-        <br /> amount cannot exceed the amount that was deposited from the
-        customer’s account as a result of the order.
-        <br />
-        <br />
+        A <span className="text-bold">refund.do</span> request is used to refund
+        deposited money.
+      </p>
+      <p className="componentParagraph">
+        This request returns the funds paid for the order back to the customer.
+        The request results in an error if the customer was not charged. Under
+        NDA only the request allows multiple refunds, but their total amount
+        cannot exceed the amount that was deposited from the customer’s account
+        as a result of the order.
+      </p>
+      <p className="componentParagraph">
         A merchant’s user must have a corresponding permission in the system to
         perform a refund request.
-        <br />
-        <br />
-        <span className="text-bold">{"Request parameters:"}</span>
-        <br />
-        <br />
       </p>
+      <div className="text-bold-free">{"Request parameters:"}</div>
       <table className="componentTable">
         <thead>
           <tr>
@@ -70,25 +71,20 @@ function Refund() {
             <td>Yes</td>
             <td>
               Fields used to store additional information. The type is as
-              follows: <br />{" "}
-              <span>
-                {
-                  '{"param":"value","param2":"value2"} . bank – Will be provided during integration.'
-                }
-              </span>{" "}
-              <br />
-              request – ‘PAY’ . <br />
-              description – Free text . <br />
-              sid - Will be provided during integration.
+              follows:
+              <ul className="tableList">
+                <li>{'{"param":"value","param2":"value2"} ; '}</li>
+                <li>bank – Will be provided during integration.</li>
+                <li>request – ‘PAY’;</li>
+                <li>description – Free text;</li>
+                <li>sid - Will be provided during integration.</li>
+              </ul>
             </td>
           </tr>
         </tbody>
       </table>
       <p className="componentParagraph">
-        <br />
-        <span className="text-bold">{"Response parameters:"}</span>
-        <br />
-        <br />
+        <span className="text-bold-free">{"Response parameters:"}</span>
       </p>
 
       <table className="componentTable">
@@ -107,14 +103,21 @@ function Refund() {
             <td>Yes</td>
             <td>
               Code of the error that occurred during the process of checking the
-              3ds protocol version. 0 for successful check.
+              3ds protocol version.
+              <ul className="tableList">
+                <li>0 - for successful check.</li>
+                <li>Other code - if an error occurred when processing the</li>
+              </ul>
             </td>
           </tr>
           <tr>
             <td>errorMessage</td>
             <td>AN..512</td>
             <td>No</td>
-            <td>Message of request</td>
+            <td>
+              Information message about the transaction result: a success
+              message or the description of an error.
+            </td>
           </tr>
         </tbody>
       </table>

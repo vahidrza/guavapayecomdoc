@@ -9,47 +9,26 @@ function PaymentRequest({ CopyToClickBoard }) {
       "https://{base_url}/epg/rest/paymentorder.do?userName=apiuser&password=apiuserpassword&MDORDERf3362f7a-8c8d-4be3-9a81-423e516d5364&$PAN=5412346648811545&$CVC=000&YYYY=2025&MM=08&TEXT=Cardgoldername&language=en&browserJavaScriptEnabled=true&browserLanguage=ru-RU&browserScreenHeight=986&browserScreenWidth=1024&browserTimeZone=0&browserJavaEnabled=true&browserScreenColorDepth=16&ip=127.0.0.1"
     );
   });
-  
+
   return (
     <div id="payment" className="paymentRequest">
       <h1 className="componentHeading">Payment Request</h1>
-      <p className="componentParagraph">
-        <span className="text-bold">{"Method: "}</span>
+      <div className="text-bold-free">
+        Method:
         <span className="text-url">
           {"{base_url}/epg/rest/paymentorder.do "}
         </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Request example: "}</span> <br />
-        <span className="text-url">
-          {
-            "https://{base_url}/epg/rest/paymentorder.do?userName=apiuser&password=apiuserpassword&MDORDER=f3362f7a-8c8d-4be3-9a"
-          }
-        </span>
-        <br />
-        <span className="text-url">
-          {
-            "81-423e516d5364&$PAN=5412346648811545&$CVC=000&YYYY=2025&MM=08&TEXT=Cardgoldername&language=en&browserJava"
-          }
-        </span>
-        <br />
-        <span className="text-url">
-          {
-            "ScriptEnabled=true&browserLanguage=ru-RU&browserScreenHeight=986&browserScreenWidth=1024&browserTimeZone=0&=browserJava"
-          }
-        </span>
-        <br />
-        <span className="text-url">
-          {"Enabled=true&browserScreenColorDepth=16&ip=127.0.0.1"}
-        </span>
-        &nbsp;&nbsp;&nbsp;
+      </div>
+
+      <div className="text-bold-free">{"Request example: "}</div>
+      <div className="text-url-free">
+        {
+          "https://{base_url}/epg/rest/paymentorder.do?userName=apiuser&password=apiuserpassword&MDORDER=f3362f7a-8c8d-4be3-9a81-423e516d5364&$PAN=5412346648811545&$CVC=000&YYYY=2025&MM=08&TEXT=Cardgoldername&language=en&browserJavaScriptEnabled=true&browserLanguage=ru-RU&browserScreenHeight=986&browserScreenWidth=1024&browserTimeZone=0&=browserJavaEnabled=true&browserScreenColorDepth=16&ip=127.0.0.1"
+        }
         <CopyAllIcon className="copyIcon" id="copyIcon5" fontSize="medium" />
-        <br />
-        <br />
-        <span className="text-bold">{"Request parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      </div>
+
+      <div className="text-bold-free">{"Request parameters:"}</div>
 
       <table className="componentTable">
         <thead>
@@ -131,9 +110,10 @@ function PaymentRequest({ CopyToClickBoard }) {
             <td>
               Parameter that specifies whether supporting JavaScript is enabled
               for the cardholder’s browser.The possible values are:
-              <br />
-              -true <br />
-              -false
+              <ul className="tableList">
+                <li>true</li>
+                <li>false</li>
+              </ul>
             </td>
           </tr>
           <tr>
@@ -175,9 +155,11 @@ function PaymentRequest({ CopyToClickBoard }) {
             <td>Yes for 3ds=2</td>
             <td>
               Parameter that specifies whether supporting Java is enabled for
-              the cardholder’s browser.The possible values are: <br />
-              -true <br />
-              -true
+              the cardholder’s browser.The possible values are:
+              <ul className="tableList">
+                <li>true</li>
+                <li>false</li>
+              </ul>
             </td>
           </tr>
           <tr>
@@ -191,33 +173,13 @@ function PaymentRequest({ CopyToClickBoard }) {
           </tr>
         </tbody>
       </table>
-      <p className="componentParagraph">
-        <br />
-        <span className="text-bold">{"Response example:"}</span>
-        <br />
-        <span className="text-url">
-          {
-            '{"info":"Your order is proceeded,redirecting...","acsUrl":"https://acs.test.com/acs/api/3ds2/creqbrw","cReq":"eyJ0aHJlZURTU2VydmVyVHJhbnNJR'
-          }
-        </span>
-        <br />
-        <span className="text-url">
-          {
-            '{"CI6IjUyZmFjZjA5LTVlZGMtNDkwNC05MTEzLTFjMDljMjBkM2JjNCIsImFjc1RyYW5zSUQiOiJjMDJiZTI0OS0zNzdkLTRhMTYtYmRlMC1jMjEwOTRm'
-          }
-        </span>
-        <br />
-        <span className="text-url">
-          {
-            'MDExNzEiLCJjaGFsbGVuZ2VXaW5kb3dTaXplIjoiMDQiLCJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIn0=","errorCode":0}'
-          }
-        </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Response parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      <div className="text-bold-free">{"Response example:"}</div>
+      <div className="text-url-free">
+        {
+          '{"info":"Your order is proceeded,redirecting...","acsUrl":"https://acs.test.com/acs/api/3ds2/creqbrw","cReq":"eyJ0aHJlZURTU2VydmVyVHJhbnNJR{"CI6IjUyZmFjZjA5LTVlZGMtNDkwNC05MTEzLTFjMDljMjBkM2JjNCIsImFjc1RyYW5zSUQiOiJjMDJiZTI0OS0zNzdkLTRhMTYtYmRlMC1jMjEwOTRmMDExNzEiLCJjaGFsbGVuZ2VXaW5kb3dTaXplIjoiMDQiLCJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIn0=","errorCode":0}'
+        }
+      </div>
+      <div className="text-bold-free">{"Response parameters:"}</div>
       <table className="componentTable">
         <thead>
           <tr>
@@ -245,26 +207,34 @@ function PaymentRequest({ CopyToClickBoard }) {
             <td>AN..512</td>
             <td>No</td>
             <td>
-              Result of the payment attempt. Possible values: <br />
-              -Your order is proceeded, redirecting...
-              <br />
-              -Operation declined. Please check the data and available balance
-              of the card. Redirecting...
-              <br />
-              -Sorry, payment cannot be completed. Redirecting...
-              <br />
-              -Payment declined. Please, contact the merchant. Redirecting...
-              <br />
-              -Payment declined. Please, contact the merchant. Redirecting...
-              <br />
-              -Payment declined. Please, contact your bank. Redirecting...
-              <br />
-              -Payment declined. Please, contact your bank. Redirecting...
-              <br />
-              -Cannot connect to your bank. Please, contact your bank.
-              Redirecting...
-              <br />
-              -Processing timeout. Please, try again later. Redirecting...
+              Result of the payment attempt. Possible values:
+              <ul className="tableList">
+                <li>Your order is proceeded, redirecting...</li>
+                <li>
+                  Operation declined. Please check the data and available
+                  balance of the card. Redirecting...
+                </li>
+                <li>Sorry, payment cannot be completed. Redirecting...</li>
+                <li>
+                  Payment declined. Please, contact the merchant. Redirecting...
+                </li>
+                <li>
+                  Payment declined. Please, contact the merchant. Redirecting...
+                </li>
+                <li>
+                  Payment declined. Please, contact your bank. Redirecting...
+                </li>
+                <li>
+                  Payment declined. Please, contact your bank. Redirecting...
+                </li>
+                <li>
+                  Cannot connect to your bank. Please, contact your bank.
+                  Redirecting...
+                </li>
+                <li>
+                  Processing timeout. Please, try again later. Redirecting...
+                </li>
+              </ul>
             </td>
           </tr>
           <tr>
@@ -328,46 +298,45 @@ function PaymentRequest({ CopyToClickBoard }) {
               SDK or 3DS Server where additional information is sent from the
               cardholder to the ACS to support the authentication process. It
               must be present for 3-D Secure 2 if a cardholder challenge is
-              required.{" "}
+              required.
             </td>
           </tr>
         </tbody>
       </table>
-      <br />
+
       <p className="componentParagraph">
         If <span className="text-bold">3-D Secure</span> is required to perform
         a payment, then after the response to the payment request has been
-        received, the merchant
-        <br /> must redirect the customer to{" "}
-        <span className="text-bold">ACS</span>.<br />
+        received, the merchant must redirect the customer to{" "}
+        <span className="text-bold">ACS</span>.
+      </p>
+      <p className="componentParagraph">
         To redirect the customer to <span className="text-bold">ACS</span>, the
         merchant must perform redirection to the address specified in the acsUrl
-        parameter with
-        <br /> the body of the request. <br />
-        The request must be in the <span className="text-bold">POST</span>{" "}
-        format. Depending on the integration scheme, after passing the
-        authentication on <span className="text-bold">ACS</span>,<br /> the
-        customer is redirected to the merchant or to E-commerce Payment Gateway.
-        <br />
-        The processes of payment completion for each of these cases are listed
-        below.
-        <br />
-        <br />
-        For 3ds version 2 : <br />
-        <br />
-        <span className="iframe">
-          <span>
-            {'<form name="data" method="POST" action="{{ acsUrl }}">'}
-          </span>
-          <br />
-          <span>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {'<input type="hidden" name="creq" value="{{ cReq }}">'}
-          </span>
-          <br />
-          <span>{"</form>"}</span>
-        </span>
+        parameter with the body of the request.
       </p>
+      <p className="componentParagraph">
+        The request must be in the <span className="text-bold">POST</span>{" "}
+        format.
+      </p>
+      <p className="componentParagraph">
+        Depending on the integration scheme, after passing the authentication on{" "}
+        <span className="text-bold">ACS</span>, the customer is redirected to
+        the merchant or to E-commerce Payment Gateway. The processes of payment
+        completion for each of these cases are listed below.
+      </p>
+      <div className="text-bold-free">For 3ds version 2 :</div>
+      <div className="iframe">
+        <div className="iframeLine text-bold-free">
+          {'<form name="data" method="POST" action="{{ acsUrl }}">'}
+        </div>
+
+        <div className="iframeLine text-bold-free">
+          {'<input type="hidden" name="creq" value="{{ cReq }}">'}
+        </div>
+
+        <div className="iframeLine text-bold-free">{"</form>"}</div>
+      </div>
     </div>
   );
 }

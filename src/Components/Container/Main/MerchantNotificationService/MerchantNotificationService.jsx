@@ -19,14 +19,11 @@ function MerchantNotificationService({ CopyToClickBoard }) {
         The notification service sends a message in{" "}
         <span className="text-bold">JSON</span> format using a{" "}
         <span className="text-bold">TLS</span> protocol to the merchant
-        specified <span className="text-bold">URL</span> of the
-        <br /> service with <span className="text-bold">POST</span> method.
-        <br />
-        <br />
-        <span className="text-bold">{"Response parameters:"}</span>
+        specified <span className="text-bold">URL</span> of the service with{" "}
+        <span className="text-bold">POST</span> method.
       </p>
+      <div className="text-bold-free">{"Response parameters:"}</div>
 
-      <br />
       <table className="componentTable">
         <thead>
           <tr>
@@ -134,68 +131,56 @@ function MerchantNotificationService({ CopyToClickBoard }) {
         </tbody>
       </table>
 
+      <span className="text-bold-free">{"Response example:"}</span>
+
+      <div className="iframe">
+        <div className="iframeLine text-url-list">{"{"}</div>
+        <div className="iframeLine text-url-list">{'"status":"CREATED",'}</div>
+        <div className="iframeLine text-url-list">
+          {'"description":"No payment attempted yet.",'}
+        </div>
+        <div className="iframeLine text-url-list">{'"amount":"0.00",'}</div>
+        <div className="iframeLine text-url-list">{'"fee":"0.00",'}</div>
+        <div className="iframeLine text-url-list">
+          {'"orderId":"409082c1-5380-4f07-b5b3-f52ee159041c",'}
+        </div>
+        <div className="iframeLine text-url-list">{'"code":"-100",'}</div>
+        <div className="iframeLine text-url-list">{'"orderStatus":"0",'}</div>
+        <div className="iframeLine text-url-list">
+          {'"timestamp":"2022-11-10 00:45:15",'}
+        </div>
+        <div className="iframeLine text-url-list">{'"success":false,'}</div>
+        <div className="iframeLine text-url-list">{'"rrn":null,'}</div>
+        <div className="iframeLine text-url-list">{'"auth":"-",'}</div>
+        <div className="iframeLine text-url-list">{'"currency":"978",'}</div>
+        <div className="iframeLine text-url-list">{'"pan":"",'}</div>
+        <div className="iframeLine text-url-list">
+          {'"orderNumber":"2022111014514158",'}
+        </div>
+        <div className="iframeLine text-url-list">
+          {
+            '"signature":"LFYgBrBrA6v7he1l4jUgnTT2kRgMsqEYzLqEeu9zUZGMptpHmxpqz3GLR6EkkgDt8Hc0cvvH9oi/x53MnAcYGQWfw4eF7AqGbFa0TDATppL8q33xUXsuEJiqWWvK6ox6FRiiNbNvl52VPffPz1TWnZdcGHIZzfRLpPje/9P1wnEsiaZgX1NQsKASEDdCJ3UZ7NruMzfPrpcq8el4kpdkMRAh59ETLVw/kuRpPof+yx12ISQuOiqsXUT5Lx009xVLEoOSnt7CMw3TnA64gezJfhTob91Shykw//8Ypj2+WoiJGaixikF0H0GEfsjRBFojy8OKdxBwWM5ntgX/NWBGRw=="'
+          }
+        </div>
+        <div className="iframeLine text-url-list">{"}"}</div>
+      </div>
+
+      <div className="text-bold-free">{"Hash calculation for signature:"}</div>
       <p className="componentParagraph">
-        <br />
-        <span className="text-bold">{"Response example:"}</span>
-        <br />
-        <br />
-        <span className="iframe">
-          <span className="text-url">{"{"}</span>
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"status":"CREATED",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"description":"No payment attempted yet.",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"amount":"0.00",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"fee":"0.00",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"orderId":"409082c1-5380-4f07-b5b3-f52ee159041c",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"code":"-100",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"orderStatus":"0",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"timestamp":"2022-11-10 00:45:15",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"success":false,
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"rrn":null,
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"auth":"-",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"currency":"978",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"pan":"",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"orderNumber":"2022111014514158",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"signature":"LFYgBrBrA6v7he1l4jUgnTT2kRgMsqEYzLqEeu9zUZGMptpHmxpqz3GLR6EkkgDt8Hc0cvvH9oi/x53M
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;nAcYGQWfw4eF7AqGbFa0TDATppL8q33xUXsuEJiqWWvK6ox6FRiiNbNvl52VPffPz1TWnZdcGHIZzfRLpPje/9P1wn
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;EsiaZgX1NQsKASEDdCJ3UZ7NruMzfPrpcq8el4kpdkMRAh59ETLVw/kuRpPof+yx12ISQuOiqsXUT5Lx009xVLEoOS
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;nt7CMw3TnA64gezJfhTob91Shykw//8Ypj2+WoiJGaixikF0H0GEfsjRBFojy8OKdxBwWM5ntgX/NWBGRw=="
-          <br />
-          <span className="text-url">{"}"}</span>
-        </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Hash calculation for signature:"}</span>
-        <br />
         The hash is calculated from a string consisting of ‘name=value’ pairs
         connected by '&'.
-        <br />
-        <br />
-        <span className="text-bold">Example:</span>
-        <br />
+      </p>
+      <div className="text-bold-free">Example:</div>
+      <div className="text-url-free">
         status=CREATED&description=No payment attempted
         yet.&amount=0.00&fee=0.00&orderId=5d696a3b-afb0-4111-b201-ea00bc68c862&code=-100&orderStatus=0&timestamp=2022-11-10
         01:14:20&success=false&rrn&auth=-&currency=978&pan=&orderNumber=2022111021419470
-        &nbsp;&nbsp;
         <CopyAllIcon className="copyIcon" id="copyIcon8" fontSize="medium" />
-      </p>
+      </div>
+      <div className="componentParagraph">
+        The given string is summarized via SHA256 and converted into a
+        hexadecimal one.
+      </div>
     </div>
   );
 }

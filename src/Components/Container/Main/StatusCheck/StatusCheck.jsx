@@ -13,27 +13,20 @@ function StatusCheck({ CopyToClickBoard }) {
   return (
     <div id="status" className="statusCheck">
       <h1 className="componentHeading">Status Check</h1>
-      <p className="componentParagraph">
-        <span className="text-bold">{"Method: "}</span>
+      <div className="text-bold-free">
+        Method:
         <span className="text-url">
           {"{base_url}/transaction/{code}/status"}
         </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Request example: "}</span> <br />
-        <span className="text-url">
-          {
-            "https://{base_url}/transaction/013/status?user=apiuser&password=apiuserpassword&sid=900000&mdorder=eed077dc-cad0-4ed5-8a15-608ffc592173"
-          }
-        </span>
-        &nbsp;&nbsp;
+      </div>
+      <div className="text-bold-free">{"Request example: "}</div>
+      <div className="text-url-free">
+        {
+          "https://{base_url}/transaction/013/status?user=apiuser&password=apiuserpassword&sid=900000&mdorder=eed077dc-cad0-4ed5-8a15-608ffc592173"
+        }
         <CopyAllIcon className="copyIcon" id="copyIcon6" fontSize="medium" />
-        <br />
-        <br />
-        <span className="text-bold">{"Request parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      </div>
+      <div className="text-bold-free">{"Request parameters:"}</div>
       <table className="componentTable">
         <thead>
           <tr>
@@ -45,7 +38,7 @@ function StatusCheck({ CopyToClickBoard }) {
         </thead>
         <tbody>
           <tr>
-            <td>userName</td>
+            <td>user</td>
             <td>AN..30</td>
             <td>Yes</td>
             <td>User's login</td>
@@ -70,49 +63,40 @@ function StatusCheck({ CopyToClickBoard }) {
           </tr>
         </tbody>
       </table>
-      <p className="componentParagraph">
-        <br />
-        <span className="text-bold">{"Response example:"}</span>
-        <br />
-        <br />
-        <span className="iframe">
-          <span className="text-url">
-            {'{"Description": "Request processed successfully",'}
-          </span>
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Amount": 50.0,
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Fee": 1.0,
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"OrderId":
-          "eed077dc-cad0-4ed5-8a15-608ffc592173",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Code": "0",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Timestamp": "2022-10-28 10:23:54.133177",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Success": true,
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"RRN": "000011341431",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Auth": "524269",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Currency": 978,
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"Pan": "500000**0000",
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;"order_status": "2",
-          <br />
-          <span className="text-url">{'"status": "DEPOSITED"}'}</span>
-        </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Response parameters:"}</span>
+      <div className="text-bold-free">{"Response example:"}</div>
+      <div className="iframe">
+        <div className="iframeLine text-bold-free-iframe">
+          {'{"Description": "Request processed successfully",'}
+        </div>
+        <div className="iframeLine text-bold-free-iframe">"Amount": 50.0,</div>
+        <div className="iframeLine text-bold-free-iframe">"Fee": 1.0,</div>
+        <div className="iframeLine text-bold-free-iframe">
+          "OrderId": "eed077dc-cad0-4ed5-8a15-608ffc592173",
+        </div>
+        <div className="iframeLine text-bold-free-iframe">"Code": "0",</div>
+        <div className="iframeLine text-bold-free-iframe">
+          "Timestamp": "2022-10-28 10:23:54.133177",
+        </div>
+        <div className="iframeLine text-bold-free-iframe">"Success": true,</div>
+        <div className="iframeLine text-bold-free-iframe">
+          "RRN": "000011341431",
+        </div>
+        <div className="iframeLine text-bold-free-iframe">
+          "Auth": "524269",
+        </div>
+        <div className="iframeLine text-bold-free-iframe">"Currency": 978,</div>
+        <div className="iframeLine text-bold-free-iframe">
+          "Pan": "500000**0000",
+        </div>
+        <div className="iframeLine text-bold-free-iframe">
+          "order_status": "2",
+        </div>
+        <div className="iframeLine text-bold-free-iframe">
+          {'"status": "DEPOSITED"}'}
+        </div>
+      </div>
 
-        <br />
-        <br />
-      </p>
-
+      <span className="text-bold-free">{"Response parameters:"}</span>
       <table className="componentTable">
         <thead>
           <tr>
@@ -203,10 +187,6 @@ function StatusCheck({ CopyToClickBoard }) {
           </tr>
         </tbody>
       </table>
-
-      <br />
-      <br />
-      <br />
       <table className="componentTable">
         <thead>
           <tr>

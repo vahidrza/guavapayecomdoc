@@ -1,21 +1,21 @@
 import "./header.css";
-import React, { useEffect } from "react";
+import React /*, { useEffect } */ from "react";
 
 function Header() {
-  useEffect(() => {
-    if (localStorage.getItem("lang") === null)
-      localStorage.setItem("lang", "en");
-    else;
-    document
-      .getElementById(localStorage.getItem("lang"))
-      .classList.add("active");
-  }, []);
+  // useEffect(() => {
+  //   if (localStorage.getItem("lang") === null)
+  //     localStorage.setItem("lang", "en");
+  //   else;
+  //   document
+  //     .getElementById(localStorage.getItem("lang"))
+  //     .classList.add("active");
+  // }, []);
 
-  let languageSetting = (lang1, lang2) => {
-    localStorage.setItem("lang", lang1);
-    document.getElementById(lang1).classList.add("active");
-    document.getElementById(lang2).classList.remove("active");
-  };
+  // let languageSetting = (lang1, lang2) => {
+  //   localStorage.setItem("lang", lang1);
+  //   document.getElementById(lang1).classList.add("active");
+  //   document.getElementById(lang2).classList.remove("active");
+  // };
 
   return (
     <div id="header" className="header">
@@ -31,7 +31,7 @@ function Header() {
         </h1>
       </div>
 
-      <div className="headerChanges">
+      {/* <div className="headerChanges">
         <div className="headerChangesLanguage">
           <div
             onClick={() => languageSetting("en", "ru")}
@@ -49,12 +49,12 @@ function Header() {
           </div>
         </div>
 
-        {/* <div className="headerChangesPageMode">
+        <div className="headerChangesPageMode">
           <div className="headerChangesPageModeElement">Lite</div>
 
           <div className="headerChangesPageModeElement">Dark</div>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
     </div>
   );
 }

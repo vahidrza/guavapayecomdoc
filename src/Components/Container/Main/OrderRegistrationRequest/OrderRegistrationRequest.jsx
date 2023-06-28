@@ -13,31 +13,20 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
   return (
     <div id="registerorder" className="orderRegistrationRequest">
       <h1 className="componentHeading">Order Registration Request</h1>
-      <p className="componentParagraph">
-        <span className="text-bold">{"Method: "}</span>
-        <span className="text-url">{"{base_url} /epg/rest/register.do "}</span>
-        <br />
-        <br />
-        <span className="text-bold">{"Request example: "}</span> <br />
-        <span className="text-url">
-          {
-            "https://{base_url}/epg/rest/register.do?userName=apiuser&password=apiuserpassword&currency=978&orderNumber=order_number&amount="
-          }
-        </span>
-        <br />
-        <span className="text-url">
-          {
-            '100&language=en&returnUrl=URL/payment/cart.html&jsonParams={"request":"PAY","bank":"000","description":"PAY","sid":"900000'
-          }
-        </span>{" "}
-        &nbsp;&nbsp;
+      <div className="text-bold-free">
+        Method:
+        <span className="text-url">{"{base_url}/epg/rest/register.do"}</span>
+      </div>
+
+      <div className="text-bold-free">{"Request example: "}</div>
+      <div className="text-url-free">
+        {
+          'https://{base_url}/epg/rest/register.do?userName=apiuser&password=apiuserpassword&currency=978&orderNumber=&amount=100&language=en&returnUrl=/payment/cart.html&jsonParams={"request":"PAY","bank":"000","description":"PAY","sid":"900000"}'
+        }
         <CopyAllIcon className="copyIcon" id="copyIcon3" fontSize="medium" />
-        <br />
-        <br />
-        <span className="text-bold">{"Request parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      </div>
+
+      <div className="text-bold-free">{"Request parameters:"}</div>
 
       <table className="componentTable">
         <thead>
@@ -104,16 +93,14 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
             <td>Yes</td>
             <td>
               Fields used to store additional information. The type is as
-              follows: <br />{" "}
-              <span>
-                {
-                  '{"param":"value","param2":"value2"} . bank – Will be provided during integration.'
-                }
-              </span>{" "}
-              <br />
-              request – ‘PAY’ . <br />
-              description – Free text . <br />
-              sid - Will be provided during integration.
+              follows:
+              <ul className="tableList">
+                <li>{'{"param":"value","param2":"value2"} ; '}</li>
+                <li>bank – Will be provided during integration.</li>
+                <li>request – ‘PAY’;</li>
+                <li>description – Free text;</li>
+                <li>sid - Will be provided during integration.</li>
+              </ul>
             </td>
           </tr>
           <tr>
@@ -130,16 +117,24 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
               Lifespan of the order, in seconds. The order lifespan duration can
               be taken from the following parameters (from the highest priority
               to the lowest):
-              <br />-<span className="text-bold">sessionTimeoutSecs</span>{" "}
-              transferred in a request. It overrides all other order timeout
-              settings. <br />
-              -If the <span className="text-bold">sessionTimeoutSecs</span>{" "}
-              parameter is not specified, the default value from the merchant’s
-              settings is used (the default value is 1200 seconds) .
-              <br />
-              -If the request contains the expirationDate parameter, the{" "}
-              <span className="text-bold">sessionTimeoutSecs</span> parameter is
-              ignored.
+              <ul className="tableList">
+                <li>
+                  <span className="text-bold">sessionTimeoutSecs</span>{" "}
+                  transferred in a request. It overrides all other order timeout
+                  settings.
+                </li>
+                <li>
+                  If the <span className="text-bold">sessionTimeoutSecs</span>{" "}
+                  parameter is not specified, the default value from the
+                  merchant’s settings is used (the default value is 1200
+                  seconds) .
+                </li>
+                <li>
+                  If the request contains the expirationDate parameter, the{" "}
+                  <span className="text-bold">sessionTimeoutSecs</span>{" "}
+                  parameter is ignored.
+                </li>
+              </ul>
             </td>
           </tr>
           <tr>
@@ -156,21 +151,13 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
           </tr>
         </tbody>
       </table>
-      <p className="componentParagraph">
-        <br />
-        <span className="text-bold">{"Response example:"}</span>
-        <br />
-        <span className="text-url">
-          {
-            '{"orderId":"a2756f44-eb90-4649-9efc-c1047363e7d0","formUrl":"https:// {base_url}/epg/merchants/Merchant/payment_en.html?mdOrder=a2756f44-eb90-4649-9efc-c1047363e7d0"}'
-          }
-        </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Response parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      <div className="text-bold-free">{"Response example:"}</div>
+      <div className="text-url-free">
+        {
+          '{"orderId":"a2756f44-eb90-4649-9efc-c1047363e7d0","formUrl":"https:// {base_url}/epg/merchants/Merchant/payment_en.html?mdOrder=a2756f44-eb90-4649-9efc-c1047363e7d0"}'
+        }
+      </div>
+      <div className="text-bold-free">{"Response parameters:"}</div>
       <table className="componentTable">
         <thead>
           <tr>
@@ -206,9 +193,13 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
             <td>N3</td>
             <td>No</td>
             <td>
-              Response code: <br />
-              -0 in the case of a successful transaction <br /> -Other code if
-              an error occurred when processing the request
+              Response code:
+              <ul className="tableList">
+                <li>0 in the case of a successful transaction;</li>
+                <li>
+                  Other code if an error occurred when processing the request
+                </li>
+              </ul>
             </td>
           </tr>
           <tr>

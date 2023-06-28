@@ -13,26 +13,23 @@ function BalanceCheck({ CopyToClickBoard }) {
   return (
     <div id="balance" className="balanceCheck">
       <h1 className="componentHeading">Balance Check</h1>
-      <p className="componentParagraph">
-        <span className="text-bold">{"Method: "}</span>
+      <div className="text-bold-free">
+        Method:
         <span className="text-url">
           {"{base_url}/transaction/{code}/balance"}
         </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Request example: "}</span> <br />
-        <span className="text-url">
-          {
-            "https://{base_url}/merchant/013/balance?user={username}&password={password}&currency=840"
-          }
-        </span>
-        &nbsp;&nbsp;
+      </div>
+
+      <div className="text-bold-free">Request example:</div>
+      <div className="text-url-free">
+        {
+          "https://{base_url}/merchant/013/balance?user={username}&password={password}&currency=840"
+        }
         <CopyAllIcon className="copyIcon" id="copyIcon7" fontSize="medium" />
-        <br />
-        <br />
-        <span className="text-bold">{"Request parameters:"}</span>
-      </p>
-      <br />
+      </div>
+
+      <div className="text-bold-free">{"Request parameters:"}</div>
+
       <table className="componentTable">
         <thead>
           <tr>
@@ -63,24 +60,15 @@ function BalanceCheck({ CopyToClickBoard }) {
           </tr>
         </tbody>
       </table>
-      <p className="componentParagraph">
-        <br />
-        <span className="text-bold">{"Response example:"}</span>
-        <br />
-        <br />
-        <span className="iframe">
-          <span className="text-url">{"{"}</span>
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"available_amount": "0.0"
-          <br />
-          <span className="text-url">{"}"}</span>
-        </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Response parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      <div className="text-bold-free">{"Response example:"}</div>
+
+      <div className="iframe">
+        <div className="iframeLine text-url-list">{"{"}</div>
+        <div className="iframeLine text-url-list">{'"available_amount": "0.0"'}</div>
+        <div className="iframeLine text-url-list">{"}"}</div>
+      </div>
+
+      <div className="text-bold">{"Response parameters:"}</div>
       <table className="componentTable">
         <thead>
           <tr>

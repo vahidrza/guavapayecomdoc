@@ -1,5 +1,5 @@
 import React from "react";
-import "./rightcontainer.css";
+import "./main.css";
 import Introduction from "./Introduction/Introduction";
 import OrderRegistrationRequest from "./OrderRegistrationRequest/OrderRegistrationRequest";
 import CheckThreedsVersionRequest from "./CheckThreedsVersionRequest/CheckThreedsVersionRequest";
@@ -9,9 +9,9 @@ import StatusCheck from "./StatusCheck/StatusCheck";
 import BalanceCheck from "./BalanceCheck/BalanceCheck";
 import MerchantNotificationService from "./MerchantNotificationService/MerchantNotificationService";
 import ListOfErrorCodes from "./ListOfErrorCodes/ListOfErrorCodes";
-import Faq from "./Faq/Faq";
+import FraudRules from "./FraudRules/FraudRules";
 
-function RightContainer() {
+function Main() {
   function CopyToClickBoard(elementId, urlToCopy) {
     document.getElementById(elementId).onclick = () => {
       navigator.clipboard.writeText(urlToCopy);
@@ -20,7 +20,7 @@ function RightContainer() {
   }
 
   return (
-    <div className="rightContainer">
+    <div className="main">
       <Introduction CopyToClickBoard={CopyToClickBoard} />
       <OrderRegistrationRequest CopyToClickBoard={CopyToClickBoard} />
       <CheckThreedsVersionRequest CopyToClickBoard={CopyToClickBoard} />
@@ -30,9 +30,9 @@ function RightContainer() {
       <BalanceCheck CopyToClickBoard={CopyToClickBoard} />
       <MerchantNotificationService CopyToClickBoard={CopyToClickBoard} />
       <ListOfErrorCodes CopyToClickBoard={CopyToClickBoard} />
-      <Faq />
+      <FraudRules />
     </div>
   );
 }
 
-export default RightContainer;
+export default Main;

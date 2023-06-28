@@ -1,13 +1,13 @@
 import React from "react";
 import "./container.css";
-import LeftContainer from "./LeftContainer/LeftContainer";
-import RightContainer from "./RightContainer/RightContainer";
+import Nav from "./Nav/Nav";
+import Main from "./Main/Main";
 
 function Container() {
   return (
     <div className="container">
-      <LeftContainer />
-      <RightContainer />
+      <Nav />
+      <Main />
     </div>
   );
 }

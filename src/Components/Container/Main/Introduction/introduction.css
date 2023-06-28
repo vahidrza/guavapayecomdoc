@@ -1,0 +1,24 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+}
+
+#liveUrl{
+    margin-left: 3.2rem;
+}
+
+#copyIcon2 {
+    margin-left: 3.3rem;
+}
+
+.text-url-list{
+    font-style: italic;
+    font-weight: initial;
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.introductionList {
+    list-style: number;
+    margin-left: 1.5rem;
+}

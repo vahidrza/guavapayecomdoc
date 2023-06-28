@@ -16,43 +16,43 @@ function Introduction({ CopyToClickBoard }) {
         implemented as <span className="text-bold">HTTP</span> requests with{" "}
         <span className="text-bold">POST</span> method to specific{" "}
         <span className="text-bold">URL</span>. These are separate for each
-        individual request type. The parameters used in the interactions are
-        sent as parameters of <span className="text-bold">POST</span> request;
-        their values must be <span className="text-bold">URL</span>-encoded.
-        <br />
+        individual request type.
+      </p>
+
+      <p className="componentParagraph">
+        The parameters used in the interactions are sent as parameters of{" "}
+        <span className="text-bold">POST</span> request. Their values must be{" "}
+        <span className="text-bold">URL</span>-encoded.
+      </p>
+
+      <p className="componentParagraph">
         The result of processing a request returns as a{" "}
         <span className="text-bold">JSON</span> object, for example:
-        &nbsp;&nbsp;&nbsp;
         <span className="text-url">
           {'{"errorCode":"12","errorMessage":"Empty amount"}.'}
         </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Sandbox URL: "}&nbsp;</span>
-        <span className="text-url">https://testepg.guavapay.com</span>{" "}
-        &nbsp;&nbsp;
+      </p>
+
+      <div className="text-bold-free">
+        Sandbox URL:
+        <span className="text-url">https://testepg.guavapay.com</span>
         <CopyAllIcon className="copyIcon" id="copyIcon1" fontSize="medium" />
-        <br />
-        <span className="text-bold">
-          {"Live URL: "}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+
+      <div className="text-bold-free">
+        Live URL:
+        <span id="liveUrl" className="text-url">
+          https://epg.guavapay.com
         </span>
-        <span className="text-url">https://epg.guavapay.com</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <CopyAllIcon
-          className="copyIcon"
-          id="copyIcon2"
-          fontSize="medium"
-        />{" "}
-        <br />
-        <br />
+        <CopyAllIcon className="copyIcon" id="copyIcon2" fontSize="medium" />
+      </div>
+
+      <p className="componentParagraph">
         For authorization purposes, each request must include the login and
         password of the user who manages merchants that were generated during
         the user's registration. The values are sent as the following
         parameters:
-        <br />
-        <br />
       </p>
-
       <table className="componentTable">
         <thead>
           <tr>
@@ -77,25 +77,28 @@ function Introduction({ CopyToClickBoard }) {
           </tr>
         </tbody>
       </table>
-      <br />
-      <span className="componentParagraph">
+      <p className="componentParagraph">
         <span className="text-bold">Payment — </span>a payment for goods or
         services executed through the Internet with the use of a bank card. It
         is executed as one action that does not require additional confirmation.
-        Order of the requests is described below: <br />
-        <ul className="introductionList">
-          <li className="text-url introductionListItem">
-            Order registration request
-          </li>
-          <li className="text-url introductionListItem">Payment request</li>
-          <li className="text-url introductionListItem">ACS</li>
-          <li className="text-url introductionListItem">
-            Finish 3DS Payment Request
-          </li>
-          <li className="text-url introductionListItem">Refund</li>
-          <li className="text-url introductionListItem">Status Check</li>
-        </ul>
-      </span>
+      </p>
+
+      <p className="componentParagraph">
+        Order of the requests is described below:
+      </p>
+
+      <ul className="introductionList">
+        <li className="text-url-list introductionListItem">
+          Order registration request
+        </li>
+        <li className="text-url-list introductionListItem">Payment request</li>
+        <li className="text-url-list introductionListItem">ACS</li>
+        <li className="text-url-list introductionListItem">
+          Finish 3DS Payment Request
+        </li>
+        <li className="text-url-list introductionListItem">Refund</li>
+        <li className="text-url-list introductionListItem">Status Check</li>
+      </ul>
     </div>
   );
 }

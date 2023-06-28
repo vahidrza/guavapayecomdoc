@@ -2,74 +2,86 @@ body {
     font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-    display: none;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #5d6576; 
-    border-radius: 10px;
-    
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #5d6576; 
-  }
+.text-url,
+.text-url-free,
+.text-url-list {
+    overflow-wrap: break-word;
+}
 
-  .componentHeading {
-    width: 100%;
+.componentHeading {
     text-align: center;
     font-size: 2.5em;
-    margin-top: 20px;
+    font-weight: 500;
     color: #0B9A78;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem
 }
 
 .componentParagraph {
-    margin-top: 10px;
     font-size: 1.2em;
     line-height: 1.3em;
+    margin-top: 1%;
 }
 
 .text-bold {
     font-weight: 500;
+    font-size: 1em;
     line-height: 1.3em;
+}
+
+.text-bold-free {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 1rem;
 }
 
 .text-url {
     font-style: italic;
+    font-weight: initial;
+    font-size: 1em;
+    line-height: 1.3em;
+
 }
 
-#copyIcon1,
-#copyIcon2 {
-    margin-top: 2px;
+.text-url-free {
+    font-style: italic;
+    font-weight: initial;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text-bold-free-iframe {
+    font-style: italic;
+    font-weight: initial;
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.text-bold-free>.text-url,
+p>.text-url {
+    margin-left: 1%;
 }
 
 .copyIcon {
     cursor: pointer;
+    margin-left: 2%;
+}
+
+.componentTable {
+    margin: 1.5rem 0 1.5rem 0;
+    width: 95%;
+    font-size: 1.2em;
+    line-height: 1.3em;
 }
 
 .componentTable>td,
 tr,
 th,
-tbody
-{
+tbody {
     border: 0.5px solid #D6EAE5;
     box-shadow: none;
-}
-
-.componentTable {
-    width: 90%;
-    font-size: 1.2em;
-    line-height: 1.3em;
 }
 
 .componentTable td {
@@ -82,29 +94,17 @@ tbody
     background-color: #D6EAE5;
 }
 
-.introductionList {
-    list-style: number;
-    margin-left: 20px;
-    margin-top: 10px;
+.tableList {
+    list-style: disc;
+}
+
+.tableList li {
+    margin-left: 4%;
 }
 
 .iframe {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     background-color: #D6EAE5;
-    width: 90%;
-    display: block;
-}
-
-.navList {
-    display: flex;
-}
-
-.navList .navListItem {
-    flex: 1;
-}
-
-
-.navList .navListItem a {
-    display: block;
-    width: 100%;
-    height: 100%;
+    width: 95%;
 }

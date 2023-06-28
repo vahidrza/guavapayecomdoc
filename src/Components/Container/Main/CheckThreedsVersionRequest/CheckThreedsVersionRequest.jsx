@@ -13,32 +13,23 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
   return (
     <div id="checkthreeds" className="checkThreedsVersionRequest">
       <h1 className="componentHeading">Check 3DS Version Request</h1>
-      <p className="componentParagraph">
-        <span className="text-bold">{"Method: "}</span>
+      <div className="text-bold-free">
+        {"Method: "}
         <span className="text-url">
           {"{base_url} epg/rest/check3dsversion.do"}
         </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Request example: "}</span> <br />
-        <span className="text-url">
-          {
-            "https://{base_url}/epg/rest/check3dsversion.do?username=apiuser&password=apiuserpassword&mdOrder=a2756f44-eb90-4649-9efc-c1047363e7d0&"
-          }
-        </span>
-        <span className="text-url">
-          {
-            "pan=5412346648811545&$CVC=000&$EXPIRY=0823&TEXT=CardholderName&ip=127.0.0.1&currency=978"
-          }
-        </span>{" "}
-        &nbsp;&nbsp;
+      </div>
+
+      <div className="text-bold-free">{"Request example: "}</div>
+
+      <div className="text-url-free">
+        {
+          "https://{base_url}/epg/rest/check3dsversion.do?username=apiuser&password=apiuserpassword&mdOrder=a2756f44-eb90-4649-9efc-c1047363e7d0&pan=5412346648811545&$CVC=000&$EXPIRY=0823&TEXT=CardholderName&ip=127.0.0.1&currency=978"
+        }
         <CopyAllIcon className="copyIcon" id="copyIcon4" fontSize="medium" />
-        <br />
-        <br />
-        <span className="text-bold">{"Request parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      </div>
+
+      <div className="text-bold-free">{"Request parameters:"}</div>
 
       <table className="componentTable">
         <thead>
@@ -107,19 +98,11 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
           </tr>
         </tbody>
       </table>
-      <p className="componentParagraph">
-        <br />
-        <span className="text-bold">{"Response example:"}</span>
-        <br />
-        <span className="text-url">
-          {'{"errorCode":0,"errorMessage":"Success","error":false,"3ds":2}'}
-        </span>
-        <br />
-        <br />
-        <span className="text-bold">{"Response parameters:"}</span>
-        <br />
-        <br />
-      </p>
+      <div className="text-bold-free">{"Response example:"}</div>
+      <div className="text-url-free">
+        {'{"errorCode":0,"errorMessage":"Success","error":false,"3ds":2}'}
+      </div>
+      <div className="text-bold-free">{"Response parameters:"}</div>
       <table className="componentTable">
         <thead>
           <tr>
@@ -152,7 +135,10 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
             <td>methodUrl</td>
             <td>AN..512</td>
             <td>No</td>
-            <td>ACS URL to which the methodData should be sent</td>
+            <td>
+              ACS URL to which the <span className="text-bold">methodData</span>{" "}
+              should be sent
+            </td>
           </tr>
           <tr>
             <td>methodData</td>
@@ -169,33 +155,28 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
         </tbody>
       </table>
       <p className="componentParagraph">
-        <br />
         If the parameters <span className="text-bold">methodUrl </span>and
         <span className="text-bold"> methodData </span>are’nt empty, it is
         necessary to send <span className="text-bold">methodData </span>to the
         address <span className="text-bold">methodUrl </span>in the iframe
         embedded in the page as follows:
-        <br />
-        <br />
-        <span className="iframe">
-          <span>{'<iframe name="iframe" style="display: none;" />'}</span>
-          <br />
-          <span>
-            {
-              '<form action="{{ methodUrl }}" target="iframe" method="POST" style="display: "none";">'
-            }
-          </span>
-          <br />
-          <span>
-            {
-              '<input type="hidden" name="threeDSMethodData" value="{{ methodData }}"/>'
-            }
-          </span>
-          <br />
-          <span>{"</form>"}</span>
-        </span>
-        <br />
       </p>
+      <div className="iframe">
+        <div className="iframeLine text-bold-free">
+          {'<iframe name="iframe" style="display: none;" />'}
+        </div>
+        <div className="iframeLine text-bold-free">
+          {
+            '<form action="{{ methodUrl }}" target="iframe" method="POST" style="display: "none";">'
+          }
+        </div>
+        <div className="iframeLine text-bold-free">
+          {
+            '<input type="hidden" name="threeDSMethodData" value="{{ methodData }}"/>'
+          }
+        </div>
+        <div className="iframeLine text-bold-free">{"</form>"}</div>
+      </div>
     </div>
   );
 }

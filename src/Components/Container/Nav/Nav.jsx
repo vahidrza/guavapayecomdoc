@@ -33,7 +33,7 @@ function Nav() {
           <a href="#errorcodes">List of Error Codes</a>
         </li>
         <li className="navListItem">
-          <a href="#faq">FAQ</a>
+          <a href="#fraud">Fraud Rules</a>
         </li>
       </ul>
     </div>
