@@ -96,7 +96,7 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
               follows:
               <ul className="tableList">
                 <li>{'{"param":"value","param2":"value2"} ; '}</li>
-                <li>bank – Will be provided during integration.</li>
+                <li>bank – Will be provided during integration;</li>
                 <li>request – ‘PAY’;</li>
                 <li>description – Free text;</li>
                 <li>sid - Will be provided during integration.</li>
@@ -195,9 +195,9 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
             <td>
               Response code:
               <ul className="tableList">
-                <li>0 in the case of a successful transaction;</li>
+                <li>0 - in the case of a successful transaction;</li>
                 <li>
-                  Other code if an error occurred when processing the request
+                  Other code - if an error occurred when processing the request
                 </li>
               </ul>
             </td>

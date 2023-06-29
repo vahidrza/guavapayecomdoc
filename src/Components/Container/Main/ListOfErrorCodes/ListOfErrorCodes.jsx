@@ -169,7 +169,7 @@ function ListOfErrorCodes() {
 
           <tr>
             <td>110</td>
-            <td>INVALID_AMOUNT</td>
+            <td>INVALID AMOUNT</td>
             <td>ERROR</td>
           </tr>
 
@@ -193,7 +193,7 @@ function ListOfErrorCodes() {
 
           <tr>
             <td>120</td>
-            <td>Transaction was refused.</td>
+            <td>Transaction not permitted.</td>
             <td>ERROR</td>
           </tr>
 
@@ -337,9 +337,7 @@ function ListOfErrorCodes() {
           <tr>
             <td>341023</td>
             <td>
-              3DS2 authentication. ACS cancelled challenge by timeout - ACS
-              Timeout
-            </td>
+              3DS2 authentication. ACS cancelled challenge by timeout.</td>
             <td>ERROR</td>
           </tr>
 

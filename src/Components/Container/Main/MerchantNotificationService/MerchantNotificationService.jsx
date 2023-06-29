@@ -69,7 +69,7 @@ function MerchantNotificationService({ CopyToClickBoard }) {
             <td>code</td>
             <td>N1..6</td>
             <td>Yes</td>
-            <td>Error code or 0 if order paid successfully.</td>
+            <td>Error code or 0 - if order paid successfully.</td>
           </tr>
           <tr>
             <td>timestamp</td>

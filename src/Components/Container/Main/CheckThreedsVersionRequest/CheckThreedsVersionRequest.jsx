@@ -94,7 +94,7 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
             <td>ip</td>
             <td>AN..512</td>
             <td>Yes</td>
-            <td>Ip Address</td>
+            <td>IP address</td>
           </tr>
         </tbody>
       </table>
@@ -119,7 +119,7 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
             <td>Yes</td>
             <td>
               Code of the error that occurred during the process of checking the
-              3ds protocol version. 0 for successful check.
+              3ds protocol version. 0 - for successful check.
             </td>
           </tr>
           <tr>

@@ -53,11 +53,7 @@ function Refund() {
             <td>orderId</td>
             <td>ANS36</td>
             <td>No</td>
-            <td>
-              Unique order number in the E- commerce Payment Gateway. It is
-              absent if the order registration has failed (the error is
-              described in the ErrorCode field)
-            </td>
+            <td>Unique order number in the E- commerce Payment Gateway.</td>
           </tr>
           <tr>
             <td>amount</td>
@@ -74,7 +70,7 @@ function Refund() {
               follows:
               <ul className="tableList">
                 <li>{'{"param":"value","param2":"value2"} ; '}</li>
-                <li>bank – Will be provided during integration.</li>
+                <li>bank – Will be provided during integration;</li>
                 <li>request – ‘PAY’;</li>
                 <li>description – Free text;</li>
                 <li>sid - Will be provided during integration.</li>
@@ -102,8 +98,7 @@ function Refund() {
             <td>N1</td>
             <td>Yes</td>
             <td>
-              Code of the error that occurred during the process of checking the
-              3ds protocol version.
+              Response code:
               <ul className="tableList">
                 <li>0 - for successful check.</li>
                 <li>Other code - if an error occurred when processing the</li>

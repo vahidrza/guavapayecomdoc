@@ -5,13 +5,12 @@ function FraudRules() {
   return (
     <div id="fraud" className="fraud">
       <h1 className="componentHeading">Fraud Rules</h1>
-      <div className="text-bold-free">{"E-COM FRAUD RULES:"}</div>
       <p className="componentParagraph">
         In case of 3 unsuccessful transactions within 24 hours (operational
         day), depending on the error code, the card will be blocked for (forever
         / 24 hours ). Also, the interval between operations should be at least
-        30 seconds. You will receive in response to a status request: 05: do not
-        honor by fraud.
+        30 seconds. You will receive in response to a status request:{" "}
+        <span className="text-url">05: do not honor by fraud.</span>
       </p>
       <div className="text-bold-free">For successful transactions:</div>
       <ul>
