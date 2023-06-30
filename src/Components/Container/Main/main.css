@@ -1,6 +1,20 @@
 .main {
     display: flex;
     flex-direction: column;
-    margin-left:15rem;
+    margin-left: 15rem;
     width: 80%;
+}
+
+.copyNotification {
+    width: 400px;
+    height: 60px;
+    background-color: #D6EAE5;
+    color: #0B9A78;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #0B9A78;
+    border-radius: 10px;
 }

@@ -14,8 +14,15 @@ import FraudRules from "./FraudRules/FraudRules";
 function Main() {
   function CopyToClickBoard(elementId, urlToCopy) {
     document.getElementById(elementId).onclick = () => {
+      let copyNotification = document.createElement("span");
+      let header = document.getElementById("header");
+      copyNotification.textContent = "Successfully copied to Clickboard!";
+      copyNotification.classList.add("copyNotification");
+      header.appendChild(copyNotification);
+      setTimeout(() => {
+        header.removeChild(header.lastChild);
+      }, 1200);
       navigator.clipboard.writeText(urlToCopy);
-      alert("Successfully copied to Clickboard!");
     };
   }
 
@@ -25,11 +32,11 @@ function Main() {
       <OrderRegistrationRequest CopyToClickBoard={CopyToClickBoard} />
       <CheckThreedsVersionRequest CopyToClickBoard={CopyToClickBoard} />
       <PaymentRequest CopyToClickBoard={CopyToClickBoard} />
-      <Refund CopyToClickBoard={CopyToClickBoard} />
+      <Refund />
       <StatusCheck CopyToClickBoard={CopyToClickBoard} />
       <BalanceCheck CopyToClickBoard={CopyToClickBoard} />
       <MerchantNotificationService CopyToClickBoard={CopyToClickBoard} />
-      <ListOfErrorCodes CopyToClickBoard={CopyToClickBoard} />
+      <ListOfErrorCodes />
       <FraudRules />
     </div>
   );
