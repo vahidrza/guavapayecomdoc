@@ -11,7 +11,7 @@ function BalanceCheck({ CopyToClickBoard }) {
   });
 
   return (
-    <div id="balance" className="balanceCheck">
+    <div id="balance" className="balanceCheck component">
       <h1 className="componentHeading">Balance Check</h1>
       <div className="text-bold-free">
         Method:

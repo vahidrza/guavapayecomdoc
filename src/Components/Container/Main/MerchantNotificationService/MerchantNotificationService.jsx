@@ -11,7 +11,7 @@ function MerchantNotificationService({ CopyToClickBoard }) {
   });
 
   return (
-    <div id="notification" className="merchantNotificationService">
+    <div id="notification" className="merchantNotificationService component">
       <h1 className="componentHeading">
         Merchant Notification Service(Call Back)
       </h1>

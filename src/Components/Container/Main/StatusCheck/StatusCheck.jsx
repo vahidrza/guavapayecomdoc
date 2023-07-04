@@ -11,7 +11,7 @@ function StatusCheck({ CopyToClickBoard }) {
   });
 
   return (
-    <div id="status" className="statusCheck">
+    <div id="status" className="statusCheck component">
       <h1 className="componentHeading">Status Check</h1>
       <div className="text-bold-free">
         Method:

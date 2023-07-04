@@ -11,7 +11,7 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
   });
 
   return (
-    <div id="registerorder" className="orderRegistrationRequest">
+    <div id="registerorder" className="orderRegistrationRequest component">
       <h1 className="componentHeading">Order Registration Request</h1>
       <div className="text-bold-free">
         Method:

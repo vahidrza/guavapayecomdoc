@@ -3,7 +3,7 @@ import "./refund.css";
 
 function Refund() {
   return (
-    <div id="refund" className="refund">
+    <div id="refund" className="refund component">
       <h1 className="componentHeading">Refund</h1>
 
       <div className="text-bold-free">

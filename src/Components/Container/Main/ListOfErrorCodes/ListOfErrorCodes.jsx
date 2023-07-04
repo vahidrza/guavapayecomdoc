@@ -3,7 +3,7 @@ import "./listOfErrorCodes.css";
 
 function ListOfErrorCodes() {
   return (
-    <div id="errorcodes" className="listOfErrorCodes">
+    <div id="errorcodes" className="listOfErrorCodes component">
       <h1 className="componentHeading">List of Error Codes</h1>
       <table className="componentTable">
         <thead>

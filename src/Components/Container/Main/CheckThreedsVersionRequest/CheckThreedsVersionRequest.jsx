@@ -11,7 +11,7 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
   });
 
   return (
-    <div id="checkthreeds" className="checkThreedsVersionRequest">
+    <div id="checkthreeds" className="checkThreedsVersionRequest component">
       <h1 className="componentHeading">Check 3DS Version Request</h1>
       <div className="text-bold-free">
         {"Method: "}

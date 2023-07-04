@@ -3,7 +3,7 @@ import "./fraudRules.css";
 
 function FraudRules() {
   return (
-    <div id="fraud" className="fraud">
+    <div id="fraud" className="fraud component">
       <h1 className="componentHeading">Fraud Rules</h1>
       <p className="componentParagraph">
         In case of 3 unsuccessful transactions within 24 hours (operational

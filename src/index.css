@@ -2,10 +2,8 @@ body {
     font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
 }
 
-.text-url,
-.text-url-free,
-.text-url-list {
-    overflow-wrap: break-word;
+.component {
+    padding-top: 50px;
 }
 
 .componentHeading {
@@ -23,6 +21,12 @@ body {
     margin-top: 1%;
 }
 
+.text-url,
+.text-url-free,
+.text-url-list {
+    overflow-wrap: break-word;
+}
+
 .text-bold {
     font-weight: 500;
     font-size: 1em;
@@ -33,6 +37,7 @@ body {
     font-size: 1.2em;
     font-weight: 500;
     margin-top: 1rem;
+    
 }
 
 .text-url {
@@ -50,6 +55,20 @@ body {
     line-height: 1.3em;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    background-color: #D6EAE5;
+    width: 95%;
+}
+
+.text-bold-free>.text-url,
+p>.text-url {
+    margin-left: 1%;
+}
+
+.iframe {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #D6EAE5;
+    width: 95%;
 }
 
 .text-bold-free-iframe {
@@ -57,11 +76,6 @@ body {
     font-weight: initial;
     font-size: 1.2em;
     line-height: 1.3em;
-}
-
-.text-bold-free>.text-url,
-p>.text-url {
-    margin-left: 1%;
 }
 
 .copyIcon {
@@ -100,11 +114,4 @@ tbody {
 
 .tableList li {
     margin-left: 4%;
-}
-
-.iframe {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: #D6EAE5;
-    width: 95%;
 }

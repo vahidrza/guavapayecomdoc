@@ -6,7 +6,7 @@ function Nav() {
     <div className="nav">
       <ul className="navList">
         <li className="navListItem">
-          <a href="#introduction">Introduction</a>
+          <a href="#top">Introduction</a>
         </li>
         <li className="navListItem">
           <a href="#registerorder">Order Registration</a>

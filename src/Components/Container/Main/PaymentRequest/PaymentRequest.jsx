@@ -11,7 +11,7 @@ function PaymentRequest({ CopyToClickBoard }) {
   });
 
   return (
-    <div id="payment" className="paymentRequest">
+    <div id="payment" className="paymentRequest component">
       <h1 className="componentHeading">Payment Request</h1>
       <div className="text-bold-free">
         Method:
