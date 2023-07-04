@@ -20,7 +20,7 @@ function Header() {
   return (
     <div id="header" className="header">
       <div className="headerLogo">
-        <a href="/">
+        <a href="# ">
           <img src="https://apidocs.guavapay.com/images/logo2.jpg" alt="" />
         </a>
       </div>
