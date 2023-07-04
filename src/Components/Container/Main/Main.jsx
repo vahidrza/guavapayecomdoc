@@ -10,6 +10,7 @@ import BalanceCheck from "./BalanceCheck/BalanceCheck";
 import MerchantNotificationService from "./MerchantNotificationService/MerchantNotificationService";
 import ListOfErrorCodes from "./ListOfErrorCodes/ListOfErrorCodes";
 import FraudRules from "./FraudRules/FraudRules";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
 function Main() {
   function CopyToClickBoard(elementId, urlToCopy) {
@@ -38,6 +39,11 @@ function Main() {
       <MerchantNotificationService CopyToClickBoard={CopyToClickBoard} />
       <ListOfErrorCodes />
       <FraudRules />
+      <div className="goToTheTop">
+        <a id="goToTheTopAnchor" className="goToTheTopAnchor" href="#top">
+          <KeyboardDoubleArrowUpIcon fontSize="large" />
+        </a>
+      </div>
     </div>
   );
 }

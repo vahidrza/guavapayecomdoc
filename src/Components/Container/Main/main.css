@@ -18,3 +18,12 @@
     border: 1.5px solid #0B9A78;
     border-radius: 10px;
 }
+
+.goToTheTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
