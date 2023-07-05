@@ -16,18 +16,23 @@ function FraudRules() {
       <ul>
         <li>
           <span className="text-url-list">
-            - 5 transactions per day on the card. Daily limit on 1 card - 2000
+            - 10 transactions per day on the card. Daily limit on 1 card - 2000
             EUR;
           </span>
         </li>
         <li>
           <span className="text-url-list">
-            - 10 transactions per week. 5000 EUR per week;
+            - 20 transactions per week. 5000 EUR per week;
           </span>
         </li>
         <li>
           <span className="text-url-list">
-            - 16 transactions per month. 10000 EUR per month;
+            - 30 transactions per month. 10000 EUR per month;
+          </span>
+        </li>
+        <li>
+          <span className="text-url-list">
+            - It is prohibited to pay with the same card at 2 different terminals in 5 hours;
           </span>
         </li>
       </ul>
