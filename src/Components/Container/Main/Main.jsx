@@ -14,16 +14,15 @@ import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp
 
 function Main() {
   function CopyToClickBoard(elementId, urlToCopy) {
+    let copyNotification = document.querySelector(".copyNotification");
     document.getElementById(elementId).onclick = () => {
-      let copyNotification = document.createElement("span");
-      let header = document.getElementById("header");
-      copyNotification.textContent = "Successfully copied to Clickboard!";
-      copyNotification.classList.add("copyNotification");
-      header.appendChild(copyNotification);
-      setTimeout(() => {
-        header.removeChild(header.lastChild);
-      }, 1200);
+      copyNotification.style.display = "inline-flex";
+      copyNotification.innerHTML = "Successfully copied to Clickboard!";
       navigator.clipboard.writeText(urlToCopy);
+      setTimeout(() => {
+        copyNotification.style.display = "none";
+        copyNotification.innerHTML = "";
+      }, 1500);
     };
   }
 
@@ -44,6 +43,7 @@ function Main() {
           <KeyboardDoubleArrowUpIcon fontSize="large" />
         </a>
       </div>
+      <div className="copyNotification"></div>
     </div>
   );
 }
