@@ -11,8 +11,8 @@ function Container() {
     for (let index = 0; index < 10; index++) {
       components[index].onmouseover = () => {
         listItems[index].style.backgroundColor = "#D6EAE5";
-        document.getElementById("goToTheTopAnchor").style.color =
-          index === 0 ? "#FFF" : "#0B9A78";
+        document.getElementById("goToTheTopAnchor").style.display =
+          index === 0 ? "none" : "block";
       };
       components[index].onmouseout = () => {
         listItems[index].style.backgroundColor = "#FFF";

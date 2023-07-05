@@ -14,6 +14,11 @@
     cursor: pointer;
 }
 
+.goToTheTopAnchor{
+    color: #0B9A78;
+    display: none;
+}
+
 .copyNotification {
     display: none;
     position: fixed;
