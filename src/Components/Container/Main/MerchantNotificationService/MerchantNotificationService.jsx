@@ -22,6 +22,36 @@ function MerchantNotificationService({ CopyToClickBoard }) {
         specified <span className="text-bold">URL</span> of the service with{" "}
         <span className="text-bold">POST</span> method.
       </p>
+
+      <div className="text-bold-free">Signature verification:</div>
+      <p className="componentParagraph">Encoding UTF-8.</p>
+
+      <ol className="introductionList">
+        <li className="text-url-list introductionListItem">
+          To prepare a message for signature verification create a string to
+          calculate SHA256 hash value. To do this, connect all the fields of the
+          message except the signature field as the key=value of the pair with
+          the separator ‘&’. Field names of the message are in lexicographical
+          order. Example:
+        </li>
+        <div className="text-url-free">
+          status=CREATED&description=No payment attempted
+          yet.&amount=0.00&fee=0.00&orderId=5d696a3b-afb0-4111-b201-ea00bc68c862&code=-100&orderStatus=0&timestamp=2022-11-10
+          01:14:20&success=false&rrn&auth=-&currency=978&pan=&orderNumber=2022111021419470
+          <CopyAllIcon className="copyIcon" id="copyIcon8" fontSize="medium" />
+        </div>
+        <li className="text-url-list introductionListItem">
+          Calculate SHA256 hash from string and conduct a hexadecimal conversion
+          after that.
+        </li>
+        <li className="text-url-list introductionListItem">
+          Decode received signature field of message from Base64.
+        </li>
+        <li className="text-url-list introductionListItem">
+          Verify signature using a certificate public key.
+        </li>
+      </ol>
+
       <div className="text-bold-free">{"Response parameters:"}</div>
 
       <table className="componentTable">
@@ -128,6 +158,12 @@ function MerchantNotificationService({ CopyToClickBoard }) {
             <td>Yes</td>
             <td>Order status</td>
           </tr>
+          <tr>
+            <td>signature</td>
+            <td>ANS..512</td>
+            <td>Yes</td>
+            <td>Base64 encoded hash signed by “SHA256withRSA” algorithm.</td>
+          </tr>
         </tbody>
       </table>
 
@@ -163,23 +199,6 @@ function MerchantNotificationService({ CopyToClickBoard }) {
           }
         </div>
         <div className="iframeLine text-url-list">{"}"}</div>
-      </div>
-
-      <div className="text-bold-free">{"Hash calculation for signature:"}</div>
-      <p className="componentParagraph">
-        The hash is calculated from a string consisting of ‘name=value’ pairs
-        connected by '&'.
-      </p>
-      <div className="text-bold-free">Example:</div>
-      <div className="text-url-free">
-        status=CREATED&description=No payment attempted
-        yet.&amount=0.00&fee=0.00&orderId=5d696a3b-afb0-4111-b201-ea00bc68c862&code=-100&orderStatus=0&timestamp=2022-11-10
-        01:14:20&success=false&rrn&auth=-&currency=978&pan=&orderNumber=2022111021419470
-        <CopyAllIcon className="copyIcon" id="copyIcon8" fontSize="medium" />
-      </div>
-      <div className="componentParagraph">
-        The given string is summarized via SHA256 and converted into a
-        hexadecimal one.
       </div>
     </div>
   );
