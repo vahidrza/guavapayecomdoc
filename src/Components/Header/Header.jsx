@@ -7,7 +7,7 @@ function Header() {
     <div id="header" className="header">
       <div className="headerLogo">
         <a href="# ">
-          <img src="https://apidocs.guavapay.com/images/logo2.jpg" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/assets/img/logo.png`} alt="" />
         </a>
       </div>
 
