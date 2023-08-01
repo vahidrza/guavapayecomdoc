@@ -24,10 +24,8 @@ function Main() {
         for (let index = 0; index < listItems.length; index++) {
           listItems[index].classList.remove("active");
         }
-
         //Adding active class to hovered component's list item
-        document
-          .querySelectorAll('[href = "#' + e.target.id + '"]')[0]
+        document.getElementById(`${e.target.id}NavItem`)
           .parentElement.classList.add("active");
       };
     }

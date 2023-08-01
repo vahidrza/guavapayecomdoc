@@ -2,6 +2,17 @@ import React, { useEffect } from "react";
 import "./nav.css";
 
 function Nav() {
+
+  //Function to Go targetted Component
+  let scrollToComponent = (e, targetComponent) => {
+    const element = document.getElementById(targetComponent);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    e.preventDefault();
+  }
+
+
   useEffect(() => {
     //Get All List Items
     const listItems = document.getElementsByClassName("navListItem");
@@ -49,34 +60,34 @@ function Nav() {
 
       <ul className="navList">
         <li className="navListItem active">
-          <a href="#introduction">Introduction</a>
+          <a id="introductionNavItem" href=" " onClick={(e) => scrollToComponent(e, 'introduction')}>Introduction</a>
         </li>
         <li className="navListItem">
-          <a href="#registerorder">Order registration</a>
+          <a id="registerorderNavItem" href=" " onClick={(e) => scrollToComponent(e, 'registerorder')} >Order registration</a>
         </li>
         <li className="navListItem">
-          <a href="#checkthreeds">Check 3DS version</a>
+          <a id="checkthreedsNavItem" href=" " onClick={(e) => scrollToComponent(e, 'checkthreeds')}>Check 3DS version</a>
         </li>
         <li className="navListItem">
-          <a href="#payment">Payment</a>
+          <a id="paymentNavItem" href=" " onClick={(e) => scrollToComponent(e, 'payment')}>Payment</a>
         </li>
         <li className="navListItem">
-          <a href="#refund">Refund</a>
+          <a id="refundNavItem" href=" " onClick={(e) => scrollToComponent(e, 'refund')}>Refund</a>
         </li>
         <li className="navListItem">
-          <a href="#status">Status check</a>
+          <a id="statusNavItem" href=" " onClick={(e) => scrollToComponent(e, 'status')}>Status check</a>
         </li>
         <li className="navListItem">
-          <a href="#balance">Balance check</a>
+          <a id="balanceNavItem" href=" " onClick={(e) => scrollToComponent(e, 'balance')}>Balance check</a>
         </li>
         <li className="navListItem">
-          <a href="#notification">Notification service</a>
+          <a id="notificationNavItem" href=" " onClick={(e) => scrollToComponent(e, 'notification')}>Notification service</a>
         </li>
         <li className="navListItem">
-          <a href="#errorcodes">List of error codes</a>
+          <a id="errorcodesNavItem" href=" " onClick={(e) => scrollToComponent(e, 'errorcodes')}>List of error codes</a>
         </li>
         <li className="navListItem">
-          <a href="#fraud">Fraud rules</a>
+          <a id="fraudNavItem" href=" " onClick={(e) => scrollToComponent(e, 'fraud')}>Fraud rules</a>
         </li>
       </ul>
     </div>
