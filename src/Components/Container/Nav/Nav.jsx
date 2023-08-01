@@ -20,7 +20,7 @@ function Nav() {
     //Walking all list items
     for (let index = 0; index < listItems.length; index++) {
       //Setting color on hover action
-      listItems[index].onmouseenter = (e) => {
+      listItems[index].firstElementChild.onmouseenter = (e) => {
         for (let index = 0; index < listItems.length; index++) {
           //Removing all colored style from all elements except Selected
           if (listItems[index].classList.length === 1) {
@@ -28,16 +28,16 @@ function Nav() {
           }
         }
         //Setting color on hovered item
-        e.target.firstElementChild.style.color = "#EF6821";
+        e.target.style.color = "#EF6821";
       };
 
       //Removing color on mouse out
-      listItems[index].onmouseleave = (e) => {
-        e.target.firstElementChild.style.color = "#FFF";
+      listItems[index].firstElementChild.onmouseleave = (e) => {
+        e.target.style.color = "#FFF";
       };
 
       //Removing class from other item
-      listItems[index].onclick = (e) => {
+      listItems[index].firstElementChild.onclick = (e) => {
         for (let index = 0; index < listItems.length; index++) {
           listItems[index].classList.remove("active");
         }
