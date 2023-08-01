@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./nav.css";
 
 function Nav() {
+  useEffect(() => {
+    const listItems = document.getElementsByClassName("navListItem");
+    for (let index = 0; index < listItems.length; index++) {
+      listItems[index].onmouseenter = (e) => {
+        for (let index = 0; index < listItems.length; index++) {
+          if (listItems[index].classList.length === 1) {
+            listItems[index].firstElementChild.style.color = "#FFF";
+          }
+        }
+        e.target.firstElementChild.style.color = "#EF6821";
+      };
+
+      listItems[index].onmouseleave = (e) => {
+        e.target.firstElementChild.style.color = "#FFF";
+      };
+
+      listItems[index].onclick = (e) => {
+        for (let index = 0; index < listItems.length; index++) {
+          listItems[index].classList.remove("active");
+        }
+        e.target.parentElement.classList.add("active");
+      };
+    }
+  }, []);
   return (
     <div className="nav">
       <div className="logo">
@@ -14,7 +38,7 @@ function Nav() {
       </div>
       <ul className="navList">
         <li className="navListItem active">
-          <a href="/">Introduction</a>
+          <a href="#introduction">Introduction</a>
         </li>
         <li className="navListItem">
           <a href="#registerorder">Order registration</a>

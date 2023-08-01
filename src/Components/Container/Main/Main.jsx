@@ -10,19 +10,11 @@ import BalanceCheck from "./BalanceCheck/BalanceCheck";
 import MerchantNotificationService from "./MerchantNotificationService/MerchantNotificationService";
 import ListOfErrorCodes from "./ListOfErrorCodes/ListOfErrorCodes";
 import FraudRules from "./FraudRules/FraudRules";
-// import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
 function Main() {
   function CopyToClickBoard(elementId, urlToCopy) {
-    // let copyNotification = document.querySelector(".copyNotification");
     document.getElementById(elementId).onclick = () => {
-      // copyNotification.style.display = "inline-flex";
-      // copyNotification.innerHTML = "Successfully copied to Clickboard!";
       navigator.clipboard.writeText(urlToCopy);
-      setTimeout(() => {
-        // copyNotification.style.display = "none";
-        // copyNotification.innerHTML = "";
-      }, 1500);
     };
   }
 
