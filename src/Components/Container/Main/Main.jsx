@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./main.css";
 import Introduction from "./Introduction/Introduction";
 import OrderRegistrationRequest from "./OrderRegistrationRequest/OrderRegistrationRequest";
@@ -12,6 +12,28 @@ import ListOfErrorCodes from "./ListOfErrorCodes/ListOfErrorCodes";
 import FraudRules from "./FraudRules/FraudRules";
 
 function Main() {
+  useEffect(() => {
+    //Getting Components and List Items
+    const components = document.getElementsByClassName("component");
+    const listItems = document.getElementsByClassName("navListItem");
+
+    //Walking on all Components
+    for (let index = 0; index < components.length; index++) {
+      components[index].onmouseenter = (e) => {
+        //Removing active class from all list items
+        for (let index = 0; index < listItems.length; index++) {
+          listItems[index].classList.remove("active");
+        }
+
+        //Adding active class to hovered component's list item
+        document
+          .querySelectorAll('[href = "#' + e.target.id + '"]')[0]
+          .parentElement.classList.add("active");
+      };
+    }
+  });
+
+  //Function to Copy to Clickboard
   function CopyToClickBoard(elementId, urlToCopy) {
     document.getElementById(elementId).onclick = () => {
       navigator.clipboard.writeText(urlToCopy);
