@@ -25,7 +25,7 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
             }
           </div>
         </div>
-        <ContentCopyIcon className="copyIcon" id="copyIcon3" fontSize="small" />
+        <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon3" fontSize="small" />
       </div>
 
       <div className="method methodRequest">Request parameters:</div>

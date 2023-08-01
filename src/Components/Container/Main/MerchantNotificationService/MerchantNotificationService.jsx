@@ -45,7 +45,7 @@ function MerchantNotificationService({ CopyToClickBoard }) {
               01:14:20&success=false&rrn&auth=-&currency=978&pan=&orderNumber=2022111021419470
             </div>
           </div>
-          <ContentCopyIcon
+          <ContentCopyIcon sx={{ fontSize: 16 }}
             className="copyIcon"
             id="copyIcon8"
             fontSize="small"

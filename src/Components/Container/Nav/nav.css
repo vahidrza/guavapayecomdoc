@@ -12,18 +12,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 2.9rem;
+    margin-top: 2.2rem;
 }
 
 .navListItem {
     font-size: 1 rem !important;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     letter-spacing: 0.0165rem;
+    line-height: 1.5rem;
 }
 
 .navListItem>a {
     color: #FFF;
     text-decoration: none;
+    padding: 0 0 5px 0;
+
 }
 
 @counter-style thumbs {

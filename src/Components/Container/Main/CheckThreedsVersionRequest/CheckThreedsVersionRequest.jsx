@@ -28,7 +28,7 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
             }
           </div>
         </div>
-        <ContentCopyIcon
+        <ContentCopyIcon sx={{ fontSize: 16 }}
           className="copyIcon"
           id="copyIcon4"
           fontSize="medium"

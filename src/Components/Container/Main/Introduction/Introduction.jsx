@@ -38,7 +38,7 @@ function Introduction({ CopyToClickBoard }) {
           <h3 className="copyAreaHeading">Sandbox URL:</h3>
           <div className="copyAreaUrl">https://testepg.guavapay.com</div>
         </div>
-        <ContentCopyIcon className="copyIcon" id="copyIcon1" fontSize="small" />
+        <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon1" fontSize="small" />
       </div>
 
       <div id="copyArea2" className="copyArea">
@@ -46,7 +46,7 @@ function Introduction({ CopyToClickBoard }) {
           <h3 className="copyAreaHeading">Live URL:</h3>
           <div className="copyAreaUrl">https://epg.guavapay.com</div>
         </div>
-        <ContentCopyIcon className="copyIcon" id="copyIcon2" fontSize="small" />
+        <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon2" fontSize="small" />
       </div>
 
       <p className="componentParagraph">

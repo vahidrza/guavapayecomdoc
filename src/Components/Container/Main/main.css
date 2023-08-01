@@ -3,8 +3,8 @@
     max-height: 95.5vh;
     overflow-y: scroll;
     flex-direction: column;
-    margin-left: 19.8%;
-    width: 79.2%;
+    margin-left: 20.5%;
+    width: 78.5%;
     background-color: #FFF;
     margin-top: 1rem;
     border-radius: 1rem;
@@ -18,9 +18,10 @@
 
 .headerInfo {
     font-size: 1.25rem;
+    line-height: 2rem;
     /* font-weight: 600; */
     flex-grow: 10;
     font-weight: 500;
-    margin-left: 8%;
-    margin-top: 1.5%;
+    margin-left: 10%;
+    margin-top: 1.375rem;
 }
