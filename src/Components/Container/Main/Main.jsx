@@ -10,24 +10,27 @@ import BalanceCheck from "./BalanceCheck/BalanceCheck";
 import MerchantNotificationService from "./MerchantNotificationService/MerchantNotificationService";
 import ListOfErrorCodes from "./ListOfErrorCodes/ListOfErrorCodes";
 import FraudRules from "./FraudRules/FraudRules";
-import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
+// import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
 function Main() {
   function CopyToClickBoard(elementId, urlToCopy) {
-    let copyNotification = document.querySelector(".copyNotification");
+    // let copyNotification = document.querySelector(".copyNotification");
     document.getElementById(elementId).onclick = () => {
-      copyNotification.style.display = "inline-flex";
-      copyNotification.innerHTML = "Successfully copied to Clickboard!";
+      // copyNotification.style.display = "inline-flex";
+      // copyNotification.innerHTML = "Successfully copied to Clickboard!";
       navigator.clipboard.writeText(urlToCopy);
       setTimeout(() => {
-        copyNotification.style.display = "none";
-        copyNotification.innerHTML = "";
+        // copyNotification.style.display = "none";
+        // copyNotification.innerHTML = "";
       }, 1500);
     };
   }
 
   return (
     <div id="main" className="main">
+      <h1 className="headerInfo">
+        E-commerce Payment Gateway API Specification
+      </h1>
       <Introduction CopyToClickBoard={CopyToClickBoard} />
       <OrderRegistrationRequest CopyToClickBoard={CopyToClickBoard} />
       <CheckThreedsVersionRequest CopyToClickBoard={CopyToClickBoard} />
@@ -38,12 +41,6 @@ function Main() {
       <MerchantNotificationService CopyToClickBoard={CopyToClickBoard} />
       <ListOfErrorCodes />
       <FraudRules />
-      <div className="goToTheTop">
-        <a id="goToTheTopAnchor" className="goToTheTopAnchor" href="#top">
-          <KeyboardDoubleArrowUpIcon fontSize="large" />
-        </a>
-      </div>
-      <div className="copyNotification"></div>
     </div>
   );
 }

@@ -6,10 +6,8 @@ function Refund() {
     <div id="refund" className="refund component">
       <h1 className="componentHeading">Refund</h1>
 
-      <div className="text-bold-free">
-        Method:
-        <span className="text-url">{"{base_url}/epg/rest/refund.do"}</span>
-      </div>
+      <div className="method">Method:</div>
+      <div className="methodUrl">{"{base_url}/epg/rest/refund.do"}</div>
 
       <p className="componentParagraph">
         A <span className="text-bold">refund.do</span> request is used to refund
@@ -26,7 +24,10 @@ function Refund() {
         A merchant’s user must have a corresponding permission in the system to
         perform a refund request.
       </p>
-      <div className="text-bold-free">{"Request parameters:"}</div>
+
+      <div className="method methodRequest">Request parameters:</div>
+
+      <div className="tableContainer" >
       <table className="componentTable">
         <thead>
           <tr>
@@ -79,10 +80,11 @@ function Refund() {
           </tr>
         </tbody>
       </table>
-      <p className="componentParagraph">
-        <span className="text-bold-free">{"Response parameters:"}</span>
-      </p>
+      </div>
 
+      <div className="method methodRequest">Response parameters:</div>
+
+      <div className="tableContainer" >
       <table className="componentTable">
         <thead>
           <tr>
@@ -116,6 +118,7 @@ function Refund() {
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

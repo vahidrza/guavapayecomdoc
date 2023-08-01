@@ -6,7 +6,7 @@ function Header() {
   return (
     <div id="header" className="header">
       <div className="headerLogo">
-        <a href="# ">
+        <a href="/">
           <img src={`${process.env.PUBLIC_URL}/assets/img/logo.png`} alt="" />
         </a>
       </div>

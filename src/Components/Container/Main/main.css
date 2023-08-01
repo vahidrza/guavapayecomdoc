@@ -1,37 +1,28 @@
 .main {
     display: flex;
+    max-height: 95.5vh;
+    overflow-y: scroll;
     flex-direction: column;
-    margin-left: 15rem;
-    width: 80%;
+    /* margin-left: 17.5rem; */
+    margin-left: 19.8%;
+    width: 79.2%;
+    background-color: #FFF;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    right: 1rem;
+    color: #152F5B;
+
 }
 
-.goToTheTop {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.goToTheTopAnchor{
-    color: #0B9A78;
+.main::-webkit-scrollbar {
     display: none;
 }
 
-.copyNotification {
-    display: none;
-    position: fixed;
-    right: 10px;
-    top: 85px;
-    width: 350px;
-    height: 50px;
-    cursor: pointer;
-    background-color: #D6EAE5;
-    color: #0B9A78;
-    font-size: 1.3rem;
+.headerInfo{
+    font-size: 1.25rem;
+    /* font-weight: 600; */
+    flex-grow: 10;
     font-weight: 500;
-    align-items: center;
-    justify-content: center;
-    border: 0.5px solid #0B9A78;
-}
+    margin-left: 8%;
+    margin-top: 1.5%;
+} 

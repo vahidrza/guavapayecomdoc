@@ -2,12 +2,12 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: #FFF;
+    /* background-color: #FFF; */
     display: flex;
-    border-bottom: 1px solid #0B9A78;
-    padding: 10px 20px 10px 30px;
+    /* border-bottom: 1px solid #0B9A78; */
+    /* padding: 10px 20px 10px 30px; */
     align-items: stretch;
-    color: #0B9A78;
+    /* color: #0B9A78; */
 }
 
 .headerLogo>a>img {

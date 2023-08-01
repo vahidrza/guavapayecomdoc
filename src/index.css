@@ -1,24 +1,61 @@
 body {
-    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    font-family: 'General Sans', sans-serif;
 }
 
 .component {
-    padding-top: 50px;
+    margin-left: 8%;
+    margin-top: 3rem;
+    width: 59%;
 }
 
 .componentHeading {
-    text-align: center;
     font-size: 2.5em;
     font-weight: 500;
-    color: #0B9A78;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
 }
 
 .componentParagraph {
-    font-size: 1.2em;
-    line-height: 1.3em;
-    margin-top: 1%;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.componentParagraphNotBottomMargin {
+    margin-bottom: 0.3rem;
+}
+
+.copyArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    background-color: #E3F5FF;
+    border: 1px solid #70D5FF;
+    border-radius: 0.75rem;
+    padding-right: 1rem;
+    line-height: 1.8rem;
+}
+
+.copyAreaContainer {
+    margin-left: 1rem;
+    width: 90%;
+}
+
+.copyAreaHeading {
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+.copyAreaUrl {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.copyIcon {
+    cursor: pointer;
+    padding: 0.1rem;
+    background-color: #FFF;
 }
 
 .text-url,
@@ -27,85 +64,43 @@ body {
     overflow-wrap: break-word;
 }
 
-.text-bold {
-    font-weight: 500;
-    font-size: 1em;
-    line-height: 1.3em;
-}
+.tableContainer {
+    border: 0.5px solid #BDC4CF;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
 
-.text-bold-free {
-    font-size: 1.2em;
-    font-weight: 500;
-    margin-top: 1rem;
-    
-}
-
-.text-url {
-    font-style: italic;
-    font-weight: initial;
-    font-size: 1em;
-    line-height: 1.3em;
-
-}
-
-.text-url-free {
-    font-style: italic;
-    font-weight: initial;
-    font-size: 1.3em;
-    line-height: 1.3em;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: #D6EAE5;
-    width: 95%;
-}
-
-.text-bold-free>.text-url,
-p>.text-url {
-    margin-left: 1%;
-}
-
-.iframe {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: #D6EAE5;
-    width: 95%;
-}
-
-.text-bold-free-iframe {
-    font-style: italic;
-    font-weight: initial;
-    font-size: 1.2em;
-    line-height: 1.3em;
-}
-
-.copyIcon {
-    cursor: pointer;
-    margin-left: 2%;
 }
 
 .componentTable {
-    margin: 1.5rem 0 1.5rem 0;
-    width: 95%;
-    font-size: 1.2em;
-    line-height: 1.3em;
+    width: 100%;
 }
 
-.componentTable>td,
-tr,
-th,
-tbody {
-    border: 0.5px solid #D6EAE5;
-    box-shadow: none;
+.componentTable>thead>tr>td {
+    font-size: 0.9375rem;
+    background-color: #ECEFF5;
+    padding: 0.88rem 1rem;
+    font-weight: 500;
 }
 
-.componentTable td {
-    padding: 20px;
-    border: 2px solid #D6EAE5;
+.componentTable>tbody>tr>td {
+    font-size: 0.875rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #BDC4CF;
+    font-weight: 500;
+    line-height: 1.2rem;
 }
 
-.componentTable thead {
-    font-weight: bold;
-    background-color: #D6EAE5;
+.componentTable>tbody>tr>td:first-child {
+    border-left: 0;
+}
+
+.componentTable>tbody>tr>td:last-child {
+    border-right: 0;
+}
+
+.componentTable>tbody>tr:last-child>td {
+    border-bottom: 0;
 }
 
 .tableList {
@@ -113,5 +108,21 @@ tbody {
 }
 
 .tableList li {
-    margin-left: 4%;
+    margin-left: 1rem;
+}
+
+.method {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 0.6rem;
+}
+
+.methodUrl {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.methodRequest {
+    margin-bottom: 1.3rem;
 }

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./introduction.css";
-import CopyAllIcon from "@mui/icons-material/CopyAll";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 function Introduction({ CopyToClickBoard }) {
   useEffect(() => {
@@ -9,7 +9,7 @@ function Introduction({ CopyToClickBoard }) {
   });
 
   return (
-    <div id="introduction" className="introduction">
+    <div id="introduction" className="introduction component">
       <h1 className="componentHeading">Introduction</h1>
       <p className="componentParagraph">
         Interactions between the merchant and the E-commerce Payment Gateway are
@@ -19,7 +19,7 @@ function Introduction({ CopyToClickBoard }) {
         individual request type.
       </p>
 
-      <p className="componentParagraph">
+      <p className="componentParagraph componentParagraphNotBottomMargin">
         The parameters used in the interactions are sent as parameters of{" "}
         <span className="text-bold">POST</span> request. Their values must be{" "}
         <span className="text-bold">URL</span>-encoded.
@@ -33,18 +33,20 @@ function Introduction({ CopyToClickBoard }) {
         </span>
       </p>
 
-      <div className="text-bold-free">
-        Sandbox URL:
-        <span className="text-url">https://testepg.guavapay.com</span>
-        <CopyAllIcon className="copyIcon" id="copyIcon1" fontSize="medium" />
+      <div id="copyArea1" className="copyArea">
+        <div className="copyAreaContainer">
+          <h3 className="copyAreaHeading">Sandbox URL:</h3>
+          <div className="copyAreaUrl">https://testepg.guavapay.com</div>
+        </div>
+        <ContentCopyIcon className="copyIcon" id="copyIcon1" fontSize="small" />
       </div>
 
-      <div className="text-bold-free">
-        Live URL:
-        <span id="liveUrl" className="text-url">
-          https://epg.guavapay.com
-        </span>
-        <CopyAllIcon className="copyIcon" id="copyIcon2" fontSize="medium" />
+      <div id="copyArea2" className="copyArea">
+        <div className="copyAreaContainer">
+          <h3 className="copyAreaHeading">Live URL:</h3>
+          <div className="copyAreaUrl">https://epg.guavapay.com</div>
+        </div>
+        <ContentCopyIcon className="copyIcon" id="copyIcon2" fontSize="small" />
       </div>
 
       <p className="componentParagraph">
@@ -53,51 +55,46 @@ function Introduction({ CopyToClickBoard }) {
         the user's registration. The values are sent as the following
         parameters:
       </p>
-      <table className="componentTable">
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Type</td>
-            <td>Mandatory</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>userName</td>
-            <td>AN..30</td>
-            <td>Yes</td>
-            <td>Login of the user generated during registration</td>
-          </tr>
-          <tr>
-            <td>password</td>
-            <td>AN..30</td>
-            <td>Yes</td>
-            <td>Password of the user generated during registration</td>
-          </tr>
-        </tbody>
-      </table>
-      <p className="componentParagraph">
+      <div className="tableContainer">
+        <table className="componentTable">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Type</td>
+              <td>Mandatory</td>
+              <td>Description</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>userName</td>
+              <td>AN..30</td>
+              <td>Yes</td>
+              <td>Login of the user generated during registration</td>
+            </tr>
+            <tr>
+              <td>password</td>
+              <td>AN..30</td>
+              <td>Yes</td>
+              <td>Password of the user generated during registration</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="componentParagraph componentParagraphNotBottomMargin">
         <span className="text-bold">Payment — </span>a payment for goods or
         services executed through the Internet with the use of a bank card. It
         is executed as one action that does not require additional confirmation.
-      </p>
-
-      <p className="componentParagraph">
         Order of the requests is described below:
       </p>
 
       <ul className="introductionList">
-        <li className="text-url-list introductionListItem">
-          Order registration request
-        </li>
-        <li className="text-url-list introductionListItem">Payment request</li>
-        <li className="text-url-list introductionListItem">ACS</li>
-        <li className="text-url-list introductionListItem">
-          Finish 3DS Payment Request
-        </li>
-        <li className="text-url-list introductionListItem">Refund</li>
-        <li className="text-url-list introductionListItem">Status Check</li>
+        <li>Order registration request</li>
+        <li>Payment request</li>
+        <li>ACS</li>
+        <li>Finish 3DS Payment Request</li>
+        <li>Refund</li>
+        <li>Status Check</li>
       </ul>
     </div>
   );

@@ -1,4 +1,13 @@
 .container {
   display: flex;
   flex-direction: row;
+  min-height: 100vh;
+  background-image: radial-gradient(circle,
+      hsla(218, 62%, 22%, 1),
+      hsla(218, 51%, 37%, 1),
+      hsla(218, 59%, 16%, 1),
+      hsla(218, 76%, 2%, 1),
+      hsla(218, 54%, 32%, 1),
+      hsla(218, 62%, 22%, 1)
+      );
 }

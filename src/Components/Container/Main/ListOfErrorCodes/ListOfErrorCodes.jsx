@@ -5,6 +5,7 @@ function ListOfErrorCodes() {
   return (
     <div id="errorcodes" className="listOfErrorCodes component">
       <h1 className="componentHeading">List of Error Codes</h1>
+      <div className="tableContainer" >
       <table className="componentTable">
         <thead>
           <tr>
@@ -350,6 +351,7 @@ function ListOfErrorCodes() {
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
