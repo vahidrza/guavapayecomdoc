@@ -186,14 +186,11 @@ function MerchantNotificationService({ CopyToClickBoard }) {
         </table>
       </div>
 
-
       <div id="copyArea16" className="copyArea">
         <div className="copyAreaContainer">
-      <div className="copyAreaHeading">Response example:</div>
+          <div className="copyAreaHeading">Response example:</div>
           <div className="copyAreaUrl">{"{"}</div>
-          <div className="copyAreaUrl">
-            {'"status":"CREATED",'}
-          </div>
+          <div className="copyAreaUrl">{'"status":"CREATED",'}</div>
           <div className="copyAreaUrl">
             {'"description":"No payment attempted yet.",'}
           </div>

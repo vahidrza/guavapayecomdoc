@@ -3,25 +3,35 @@ import "./nav.css";
 
 function Nav() {
   useEffect(() => {
+    //Get All List Items
     const listItems = document.getElementsByClassName("navListItem");
+
+    //Walking all list items
     for (let index = 0; index < listItems.length; index++) {
+      //Setting color on hover action
       listItems[index].onmouseenter = (e) => {
         for (let index = 0; index < listItems.length; index++) {
+          //Removing all colored style from all elements except Selected
           if (listItems[index].classList.length === 1) {
             listItems[index].firstElementChild.style.color = "#FFF";
           }
         }
+        //Setting color on hovered item
         e.target.firstElementChild.style.color = "#EF6821";
       };
 
+      //Removing color on mouse out
       listItems[index].onmouseleave = (e) => {
         e.target.firstElementChild.style.color = "#FFF";
       };
 
+      //Removing class from other item
       listItems[index].onclick = (e) => {
         for (let index = 0; index < listItems.length; index++) {
           listItems[index].classList.remove("active");
         }
+
+        //Seting className on click the item
         e.target.parentElement.classList.add("active");
       };
     }
@@ -36,6 +46,7 @@ function Nav() {
           />
         </a>
       </div>
+
       <ul className="navList">
         <li className="navListItem active">
           <a href="#introduction">Introduction</a>

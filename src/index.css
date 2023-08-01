@@ -58,12 +58,6 @@ body {
     background-color: #FFF;
 }
 
-.text-url,
-.text-url-free,
-.text-url-list {
-    overflow-wrap: break-word;
-}
-
 .tableContainer {
     border: 0.5px solid #BDC4CF;
     border-radius: 0.75rem;

@@ -338,16 +338,21 @@ function PaymentRequest({ CopyToClickBoard }) {
         the merchant or to E-commerce Payment Gateway. The processes of payment
         completion for each of these cases are listed below.
       </p>
-      <p className="componentParagraph componentParagraphNotBottomMargin">For 3ds version 2 :</p>
-       
-        <div id="copyArea10" className="copyArea">
-          <div className="copyAreaContainer">
-            <div className="copyAreaUrl">{'<form name="data" method="POST" action="{{ acsUrl }}">'}</div>
-            <div className="copyAreaUrl">{'<input type="hidden" name="creq" value="{{ cReq }}">'}</div>
-            <div className="copyAreaUrl">{"</form>"}</div>
-          </div>
-        </div>
+      <p className="componentParagraph componentParagraphNotBottomMargin">
+        For 3ds version 2 :
+      </p>
 
+      <div id="copyArea10" className="copyArea">
+        <div className="copyAreaContainer">
+          <div className="copyAreaUrl">
+            {'<form name="data" method="POST" action="{{ acsUrl }}">'}
+          </div>
+          <div className="copyAreaUrl">
+            {'<input type="hidden" name="creq" value="{{ cReq }}">'}
+          </div>
+          <div className="copyAreaUrl">{"</form>"}</div>
+        </div>
+      </div>
     </div>
   );
 }

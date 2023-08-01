@@ -3,7 +3,6 @@
     max-height: 95.5vh;
     overflow-y: scroll;
     flex-direction: column;
-    /* margin-left: 17.5rem; */
     margin-left: 19.8%;
     width: 79.2%;
     background-color: #FFF;
@@ -11,18 +10,17 @@
     border-radius: 1rem;
     right: 1rem;
     color: #152F5B;
-
 }
 
 .main::-webkit-scrollbar {
     display: none;
 }
 
-.headerInfo{
+.headerInfo {
     font-size: 1.25rem;
     /* font-weight: 600; */
     flex-grow: 10;
     font-weight: 500;
     margin-left: 8%;
     margin-top: 1.5%;
-} 
+}

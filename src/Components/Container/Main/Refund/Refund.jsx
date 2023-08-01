@@ -27,97 +27,99 @@ function Refund() {
 
       <div className="method methodRequest">Request parameters:</div>
 
-      <div className="tableContainer" >
-      <table className="componentTable">
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Type</td>
-            <td>Mandatory</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>userName</td>
-            <td>AN..30</td>
-            <td>Yes</td>
-            <td>User's login</td>
-          </tr>
-          <tr>
-            <td>password</td>
-            <td>AN..30</td>
-            <td>Yes</td>
-            <td>User's password</td>
-          </tr>
-          <tr>
-            <td>orderId</td>
-            <td>ANS36</td>
-            <td>No</td>
-            <td>Unique order number in the E- commerce Payment Gateway.</td>
-          </tr>
-          <tr>
-            <td>amount</td>
-            <td>N..20</td>
-            <td>Yes</td>
-            <td>Order amount in the minor denomination (for example, cents)</td>
-          </tr>
-          <tr>
-            <td>jsonParams</td>
-            <td>AN..1024</td>
-            <td>Yes</td>
-            <td>
-              Fields used to store additional information. The type is as
-              follows:
-              <ul className="tableList">
-                <li>{'{"param":"value","param2":"value2"} ; '}</li>
-                <li>bank – Will be provided during integration;</li>
-                <li>request – ‘PAY’;</li>
-                <li>description – Free text;</li>
-                <li>sid - Will be provided during integration.</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="tableContainer">
+        <table className="componentTable">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Type</td>
+              <td>Mandatory</td>
+              <td>Description</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>userName</td>
+              <td>AN..30</td>
+              <td>Yes</td>
+              <td>User's login</td>
+            </tr>
+            <tr>
+              <td>password</td>
+              <td>AN..30</td>
+              <td>Yes</td>
+              <td>User's password</td>
+            </tr>
+            <tr>
+              <td>orderId</td>
+              <td>ANS36</td>
+              <td>No</td>
+              <td>Unique order number in the E- commerce Payment Gateway.</td>
+            </tr>
+            <tr>
+              <td>amount</td>
+              <td>N..20</td>
+              <td>Yes</td>
+              <td>
+                Order amount in the minor denomination (for example, cents)
+              </td>
+            </tr>
+            <tr>
+              <td>jsonParams</td>
+              <td>AN..1024</td>
+              <td>Yes</td>
+              <td>
+                Fields used to store additional information. The type is as
+                follows:
+                <ul className="tableList">
+                  <li>{'{"param":"value","param2":"value2"} ; '}</li>
+                  <li>bank – Will be provided during integration;</li>
+                  <li>request – ‘PAY’;</li>
+                  <li>description – Free text;</li>
+                  <li>sid - Will be provided during integration.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div className="method methodRequest">Response parameters:</div>
 
-      <div className="tableContainer" >
-      <table className="componentTable">
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Type</td>
-            <td>Mandatory</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>errorCode</td>
-            <td>N1</td>
-            <td>Yes</td>
-            <td>
-              Response code:
-              <ul className="tableList">
-                <li>0 - for successful check.</li>
-                <li>Other code - if an error occurred when processing the</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>errorMessage</td>
-            <td>AN..512</td>
-            <td>No</td>
-            <td>
-              Information message about the transaction result: a success
-              message or the description of an error.
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="tableContainer">
+        <table className="componentTable">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Type</td>
+              <td>Mandatory</td>
+              <td>Description</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>errorCode</td>
+              <td>N1</td>
+              <td>Yes</td>
+              <td>
+                Response code:
+                <ul className="tableList">
+                  <li>0 - for successful check.</li>
+                  <li>Other code - if an error occurred when processing the</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>errorMessage</td>
+              <td>AN..512</td>
+              <td>No</td>
+              <td>
+                Information message about the transaction result: a success
+                message or the description of an error.
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
