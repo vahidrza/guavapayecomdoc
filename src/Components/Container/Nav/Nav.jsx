@@ -12,7 +12,6 @@ function Nav() {
     e.preventDefault();
   }
 
-
   useEffect(() => {
     //Get All List Items
     const listItems = document.getElementsByClassName("navListItem");
@@ -25,11 +24,8 @@ function Nav() {
         //Removing the class from the before selected icon
         document.getElementsByClassName('icon')[0].classList.remove('icon');
 
-        //Creating and inserting new item for clicked item
-        let icon = document.createElement('span');
-        icon.classList.add('icon');
-        let parent = e.target.parentElement;
-        parent.insertBefore(icon,parent.firstChild);
+        //Changing class for selected Nav item's icon
+        e.target.parentElement.firstChild.classList.add('icon');
 
         //Removing class from before selected List Item
         for (let index = 0; index < listItems.length; index++) {
@@ -58,30 +54,31 @@ function Nav() {
           <a id="introductionNavItem" href=" " onClick={(e) => scrollToComponent(e, 'introduction')}>Introduction</a>
         </li>
         <li className="navListItem">
+          <span></span>
           <a id="registerorderNavItem" href=" " onClick={(e) => scrollToComponent(e, 'registerorder')} >Order registration</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="checkthreedsNavItem" href=" " onClick={(e) => scrollToComponent(e, 'checkthreeds')}>Check 3DS version</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="paymentNavItem" href=" " onClick={(e) => scrollToComponent(e, 'payment')}>Payment</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="refundNavItem" href=" " onClick={(e) => scrollToComponent(e, 'refund')}>Refund</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="statusNavItem" href=" " onClick={(e) => scrollToComponent(e, 'status')}>Status check</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="balanceNavItem" href=" " onClick={(e) => scrollToComponent(e, 'balance')}>Balance check</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="notificationNavItem" href=" " onClick={(e) => scrollToComponent(e, 'notification')}>Notification service</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="errorcodesNavItem" href=" " onClick={(e) => scrollToComponent(e, 'errorcodes')}>List of error codes</a>
         </li>
-        <li className="navListItem">
+        <li className="navListItem"><span></span>
           <a id="fraudNavItem" href=" " onClick={(e) => scrollToComponent(e, 'fraud')}>Fraud rules</a>
         </li>
       </ul>

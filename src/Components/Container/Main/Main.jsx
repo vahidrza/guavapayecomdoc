@@ -25,14 +25,11 @@ function Main() {
         for (let index = 0; index < listItems.length; index++) {
           listItems[index].classList.remove("active");
         }
-        //Creating and inserting new item for clicked item
-        let icon = document.createElement('span');
-        icon.classList.add('icon');
-        let parent = document.getElementById(`${e.target.id}NavItem`).parentElement;
+        //Changing class for selected Nav item's icon
+        document.getElementById(`${e.target.id}NavItem`).parentElement.firstChild.classList.add('icon');
         //Adding active class to hovered component's list item
-        parent.classList.add("active");
+        document.getElementById(`${e.target.id}NavItem`).parentElement.classList.add("active");
         //Inserting the icon to the list item
-        parent.insertBefore(icon, parent.firstChild);
       };
     }
   });

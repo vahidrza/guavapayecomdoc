@@ -1,9 +1,9 @@
 .App {
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 *::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 }
