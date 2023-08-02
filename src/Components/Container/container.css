@@ -1,15 +1,6 @@
 .container {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
-  /* background-image: radial-gradient(circle,
-      hsla(218, 62%, 22%, 1),
-      hsla(218, 51%, 37%, 1),
-      hsla(218, 59%, 16%, 1),
-      hsla(218, 76%, 2%, 1),
-      hsla(218, 54%, 32%, 1),
-      hsla(218, 62%, 22%, 1)); */
-
-      background: radial-gradient(176.25% 92.03% at 16.77% 14.39%, #152F5B 0%, #2E518D 23.44%, #102241 67.40%,  #26477E 100%), linear-gradient(0deg, #152F5B 0%, #152F5B 80%), #FAFAFC;
-
-    }
+  min-height: 200vh;
+  background: radial-gradient(176.25% 92.03% at 16.77% 14.39%, #152F5B 0%, #2E518D 23.44%, #102241 47.40%, #01050B 76.04%, #26477E 100%), linear-gradient(0deg, #152F5B 0%, #152F5B 100%), #FAFAFC;
+}
