@@ -39,8 +39,23 @@ function Main() {
 
   //Function to Copy to Clickboard
   function CopyToClickBoard(elementId, urlToCopy) {
-    document.getElementById(elementId).onclick = () => {
+    document.getElementById(elementId).onclick = (e) => {
       navigator.clipboard.writeText(urlToCopy);
+
+      const notification = document.createElement('div');
+      notification.classList.add('notification');
+      notification.innerHTML = "copied"
+
+      let parentElement = e.target.parentElement.firstChild;
+      parentElement.style.marginTop = "1.4rem";
+      parentElement.appendChild(notification);
+      
+      setTimeout(() => {
+        document.getElementsByClassName('notification')[0].innerHTML = "";
+        document.getElementsByClassName('notification')[0].classList.remove('notification');
+        parentElement.style.marginTop = "0";
+
+      }, 1000);
     };
   }
 

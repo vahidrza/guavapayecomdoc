@@ -25,3 +25,20 @@
     margin-left: 10%;
     margin-top: 1.375rem;
 }
+
+.notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.625rem;
+    width: 3.3125rem;
+    height: 1.375rem;
+    background-color: #152F5B;
+    color: #FFF;
+    border-radius: 4px;
+    position: relative;
+    left: 660px; 
+    top: -40px;  
+    margin-bottom: auto;
+    /* text-align: center; */
+}
