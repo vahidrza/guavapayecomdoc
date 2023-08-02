@@ -54,12 +54,18 @@ body {
 }
 
 .copyIcon {
+    color: #374045;
     cursor: pointer;
     background-color: #FFF;
     padding: 0.21rem;
-    border: 1px solid #EBEBEB;;
+    border: 1px solid #EBEBEB;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
     border-radius: 0.25rem;
+}
+
+.copyIcon:hover{
+    border: 1px solid #152F5B;
+    color: #152F5B;
 }
 
 .tableContainer {

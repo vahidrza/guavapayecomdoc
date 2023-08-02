@@ -3,5 +3,4 @@
   flex-direction: row;
   min-height: 100vh;
   background: radial-gradient(176.25% 92.03% at 16.77% 14.39%, #152F5B 0%, #2E518D 56.44%, #102241 94.40%,  #26477E 100%), linear-gradient(0deg, #152F5B 0%, #152F5B 100%), #FAFAFC;
-  /* overflow: hidden; */
 }
