@@ -44,12 +44,12 @@ function Main() {
 
       const notification = document.createElement('div');
       notification.classList.add('notification');
-      notification.innerHTML = "copied"
+      notification.innerHTML = "Copied"
 
       let parentElement = e.target.parentElement.firstChild;
       parentElement.style.marginTop = "1.4rem";
       parentElement.appendChild(notification);
-      
+
       setTimeout(() => {
         document.getElementsByClassName('notification')[0].innerHTML = "";
         document.getElementsByClassName('notification')[0].classList.remove('notification');
