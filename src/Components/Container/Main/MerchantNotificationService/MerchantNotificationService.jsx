@@ -16,11 +16,11 @@ function MerchantNotificationService({ CopyToClickBoard }) {
         Merchant Notification Service(Call Back)
       </h1>
       <p className="componentParagraph">
-        The notification service sends a message in{" "}
-        <span className="text-bold">JSON</span> format using a{" "}
-        <span className="text-bold">TLS</span> protocol to the merchant
-        specified <span className="text-bold">URL</span> of the service with{" "}
-        <span className="text-bold">POST</span> method.
+        The notification service sends a message in
+        JSON format using a
+        TLS protocol to the merchant
+        specified URL of the service with
+        POST method.
       </p>
 
       <div className="method">Signature verification:</div>
@@ -158,7 +158,7 @@ function MerchantNotificationService({ CopyToClickBoard }) {
               <td>N 12...19</td>
               <td>No</td>
               <td>
-                Masked number of the card that has been used for the payment.{" "}
+                Masked number of the card that has been used for the payment.
               </td>
             </tr>
             <tr>

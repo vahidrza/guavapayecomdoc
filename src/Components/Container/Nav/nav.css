@@ -25,23 +25,29 @@
 .navListItem>a {
     color: #FFF;
     text-decoration: none;
-    padding: 0 0 5px 0;
-
 }
 
-@counter-style thumbs {
-    system: cyclic;
-    symbols: "🟠";
-    suffix: "";
+.navListItem>a:hover {
+    color: #EF6821;
 }
 
 .active {
+    display: flex;
+    align-items: center;
     color: #EF6821;
-    list-style: thumbs;
-    margin-left: 1.23rem;
-    padding-left: 0.5rem;
 }
 
 .active>a {
     color: #EF6821 !important;
+    margin-left: 0.875rem;
+}
+
+.icon {
+    width: 0.65rem;
+    height: 0.65rem;
+    background-color: #EF6821;
+    border-radius: 1.875rem;
+    border: 1px solid #FCA172;
+    box-shadow: 0px 1.6303679943084717px 3.623039960861206px 0px rgba(0, 0, 0, 0.02), 0px 4.507758617401123px 10.017241477966309px 0px rgba(0, 0, 0, 0.03), 0px 10.852946281433105px 24.117658615112305px 0px rgba(0, 0, 0, 0.03), 0px 36px 80px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0.03rem;
 }

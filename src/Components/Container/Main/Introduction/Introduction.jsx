@@ -13,24 +13,21 @@ function Introduction({ CopyToClickBoard }) {
       <h1 className="componentHeading">Introduction</h1>
       <p className="componentParagraph">
         Interactions between the merchant and the E-commerce Payment Gateway are
-        implemented as <span className="text-bold">HTTP</span> requests with{" "}
-        <span className="text-bold">POST</span> method to specific{" "}
-        <span className="text-bold">URL</span>. These are separate for each
+        implemented as HTTP requests with
+        POST method to specific
+        URL. These are separate for each
         individual request type.
       </p>
 
       <p className="componentParagraph componentParagraphNotBottomMargin">
-        The parameters used in the interactions are sent as parameters of{" "}
-        <span className="text-bold">POST</span> request. Their values must be{" "}
-        <span className="text-bold">URL</span>-encoded.
+        The parameters used in the interactions are sent as parameters of
+        POST request. Their values must be
+        URL-encoded.
       </p>
 
       <p className="componentParagraph">
-        The result of processing a request returns as a{" "}
-        <span className="text-bold">JSON</span> object, for example:
-        <span className="text-url">
-          {'{"errorCode":"12","errorMessage":"Empty amount"}.'}
-        </span>
+        The result of processing a request returns as a JSON object, for example:
+        "errorCode":"12","errorMessage":"Empty amount".
       </p>
 
       <div id="copyArea1" className="copyArea">
@@ -81,8 +78,9 @@ function Introduction({ CopyToClickBoard }) {
           </tbody>
         </table>
       </div>
+      
       <p className="componentParagraph componentParagraphNotBottomMargin">
-        <span className="text-bold">Payment — </span>a payment for goods or
+        Payment — a payment for goods or
         services executed through the Internet with the use of a bank card. It
         is executed as one action that does not require additional confirmation.
         Order of the requests is described below:

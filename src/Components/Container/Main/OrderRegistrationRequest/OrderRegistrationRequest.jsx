@@ -149,7 +149,7 @@ function OrderRegistrationRequest({ CopyToClickBoard }) {
               <td>
                 Date and time when the order is terminated. The following format
                 is used: yyyy-MM-ddTHH:mm:ss . If this parameter is not
-                specified, the
+                specified, the {" "}
                 <span className="text-bold">sessionTimeoutSecs</span> parameter
                 is used to determine the date and time when the order is
                 terminated.

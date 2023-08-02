@@ -20,13 +20,19 @@ function Main() {
     //Walking on all Components
     for (let index = 0; index < components.length; index++) {
       components[index].onmouseenter = (e) => {
+        document.getElementsByClassName('icon')[0].classList.remove('icon');
         //Removing active class from all list items
         for (let index = 0; index < listItems.length; index++) {
           listItems[index].classList.remove("active");
         }
+        //Creating and inserting new item for clicked item
+        let icon = document.createElement('span');
+        icon.classList.add('icon');
+        let parent = document.getElementById(`${e.target.id}NavItem`).parentElement;
         //Adding active class to hovered component's list item
-        document.getElementById(`${e.target.id}NavItem`)
-          .parentElement.classList.add("active");
+        parent.classList.add("active");
+        //Inserting the icon to the list item
+        parent.insertBefore(icon, parent.firstChild);
       };
     }
   });

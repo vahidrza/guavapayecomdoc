@@ -17,32 +17,26 @@ function Nav() {
     //Get All List Items
     const listItems = document.getElementsByClassName("navListItem");
 
-    //Walking all list items
+    //Walking on all list items
     for (let index = 0; index < listItems.length; index++) {
-      //Setting color on hover action
-      listItems[index].firstElementChild.onmouseenter = (e) => {
-        for (let index = 0; index < listItems.length; index++) {
-          //Removing all colored style from all elements except Selected
-          if (listItems[index].classList.length === 1) {
-            listItems[index].firstElementChild.style.color = "#FFF";
-          }
-        }
-        //Setting color on hovered item
-        e.target.style.color = "#EF6821";
-      };
-
-      //Removing color on mouse out
-      listItems[index].firstElementChild.onmouseleave = (e) => {
-        e.target.style.color = "#FFF";
-      };
 
       //Removing class from other item
-      listItems[index].firstElementChild.onclick = (e) => {
+      listItems[index].lastElementChild.onclick = (e) => {
+        //Removing the class from the before selected icon
+        document.getElementsByClassName('icon')[0].classList.remove('icon');
+
+        //Creating and inserting new item for clicked item
+        let icon = document.createElement('span');
+        icon.classList.add('icon');
+        let parent = e.target.parentElement;
+        parent.insertBefore(icon,parent.firstChild);
+
+        //Removing class from before selected List Item
         for (let index = 0; index < listItems.length; index++) {
           listItems[index].classList.remove("active");
         }
 
-        //Seting className on click the item
+        //Setting className on click the List item
         e.target.parentElement.classList.add("active");
       };
     }
@@ -60,6 +54,7 @@ function Nav() {
 
       <ul className="navList">
         <li className="navListItem active">
+          <span className="icon"></span>
           <a id="introductionNavItem" href=" " onClick={(e) => scrollToComponent(e, 'introduction')}>Introduction</a>
         </li>
         <li className="navListItem">

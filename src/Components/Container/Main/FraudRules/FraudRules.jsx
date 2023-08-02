@@ -9,8 +9,7 @@ function FraudRules() {
         In case of 3 unsuccessful transactions within 24 hours (operational
         day), depending on the error code, the card will be blocked for (forever
         / 24 hours ). Also, the interval between operations should be at least
-        30 seconds. You will receive in response to a status request:{" "}
-        <span className="text-url">05: do not honor by fraud.</span>
+        30 seconds. You will receive in response to a status request: 05: do not honor by fraud.
       </p>
       <div className="method">For successful transactions:</div>
       <ul>
@@ -41,9 +40,8 @@ function FraudRules() {
       <p className="componentParagraph">
         After the card will not be able to conduct transactions.
       </p>
-      <div className="componentParagraph"></div>
       <div className="method methodRequest">
-        {"List of ERROR CODES with block duration designations:"}
+        List of ERROR CODES with block duration designations:
       </div>
       <div className="tableContainer">
         <table className="componentTable">
