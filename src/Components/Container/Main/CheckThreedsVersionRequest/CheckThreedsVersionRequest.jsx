@@ -34,6 +34,7 @@ function CheckThreedsVersionRequest({ CopyToClickBoard }) {
           fontSize="medium"
         />
       </div>
+      <span id="copyIcon4Notification" className="notification">Copied</span>
 
       <div className="method methodRequest">Request parameters:</div>
 

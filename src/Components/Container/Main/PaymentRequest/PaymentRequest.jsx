@@ -27,6 +27,7 @@ function PaymentRequest({ CopyToClickBoard }) {
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon5" fontSize="small" />
       </div>
+      <span id="copyIcon5Notification" className="notification">Copied</span>
 
       <div className="method methodRequest">Request parameters:</div>
 

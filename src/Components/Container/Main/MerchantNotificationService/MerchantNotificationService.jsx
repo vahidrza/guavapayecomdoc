@@ -51,6 +51,8 @@ function MerchantNotificationService({ CopyToClickBoard }) {
             fontSize="small"
           />
         </div>
+      <span id="copyIcon8Notification" className="notification">Copied</span>
+
         <li>
           <div className="componentParagraph componentParagraphNotBottomMargin">
             Calculate SHA256 hash from string and conduct a hexadecimal

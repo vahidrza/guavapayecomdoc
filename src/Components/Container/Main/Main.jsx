@@ -38,21 +38,41 @@ function Main() {
   function CopyToClickBoard(elementId, urlToCopy) {
     document.getElementById(elementId).onclick = (e) => {
       navigator.clipboard.writeText(urlToCopy);
+      let notificationItem = document.getElementById(`${elementId}Notification`)
+      notificationItem.style.display = "flex";
+      // notificationItem.innerHTML = "Copied";
 
-      const notification = document.createElement('div');
-      notification.classList.add('notification');
-      notification.innerHTML = "Copied"
+      let parent = document.getElementById(elementId).parentElement;
 
-      let parentElement = e.target.parentElement.firstChild;
-      parentElement.style.marginTop = "1.4rem";
-      parentElement.appendChild(notification);
+      if (elementId === "copyIcon1") {
+        parent.style.marginBottom = "-6px";
+      }
+
+      else if (elementId === "copyIcon2") {
+        parent.style.marginBottom = "-14px";
+      }
+
+      else if (elementId === "copyIcon3") {
+        parent.style.marginBottom = "2px";
+      }
+
+      else parent.style.marginBottom = "2px";
 
       setTimeout(() => {
-        document.getElementsByClassName('notification')[0].innerHTML = "";
-        document.getElementsByClassName('notification')[0].classList.remove('notification');
-        parentElement.style.marginTop = "0";
 
-      }, 1000);
+        notificationItem.style.display = "none";
+        // notificationItem.innerHTML = "";
+
+        if (elementId === "copyIcon1") {
+          parent.style.marginBottom = "1rem";
+        }
+
+        else if (elementId === "copyIcon2") {
+          parent.style.marginBottom = "0.5rem";
+        }
+        else parent.style.marginBottom = "1.5rem";
+
+      }, 500);
     };
   }
 

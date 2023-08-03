@@ -15,5 +15,12 @@
 }
 
 #copyArea2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#copyIcon1Notification{
+    top: -42px;
+}
+#copyIcon2Notification{
+    top: -34px;
 }

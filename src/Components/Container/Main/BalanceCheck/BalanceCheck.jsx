@@ -28,6 +28,7 @@ function BalanceCheck({ CopyToClickBoard }) {
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon7" fontSize="small" />
       </div>
+      <span id="copyIcon7Notification" className="notification">Copied</span>
 
       <div className="method methodRequest">Request parameters:</div>
 

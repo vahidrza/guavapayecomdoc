@@ -28,6 +28,7 @@ function StatusCheck({ CopyToClickBoard }) {
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon6" fontSize="small" />
       </div>
+      <span id="copyIcon6Notification" className="notification">Copied</span>
 
       <div className="method methodRequest">Request parameters:</div>
 

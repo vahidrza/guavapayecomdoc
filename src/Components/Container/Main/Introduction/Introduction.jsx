@@ -36,8 +36,9 @@ function Introduction({ CopyToClickBoard }) {
           <div className="copyAreaUrl">https://testepg.guavapay.com</div>
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon1" fontSize="small" />
+        
       </div>
-
+      <span id="copyIcon1Notification" className="notification">Copied</span>
       <div id="copyArea2" className="copyArea">
         <div className="copyAreaContainer">
           <h3 className="copyAreaHeading">Live URL:</h3>
@@ -45,6 +46,7 @@ function Introduction({ CopyToClickBoard }) {
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon2" fontSize="small" />
       </div>
+      <span id="copyIcon2Notification" className="notification">Copied</span>
 
       <p className="componentParagraph">
         For authorization purposes, each request must include the login and
