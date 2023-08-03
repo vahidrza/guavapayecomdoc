@@ -36,7 +36,7 @@ function Introduction({ CopyToClickBoard }) {
           <div className="copyAreaUrl">https://testepg.guavapay.com</div>
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon1" fontSize="small" />
-        
+
       </div>
       <span id="copyIcon1Notification" className="notification">Copied</span>
       <div id="copyArea2" className="copyArea">
@@ -80,7 +80,7 @@ function Introduction({ CopyToClickBoard }) {
           </tbody>
         </table>
       </div>
-      
+
       <p className="componentParagraph componentParagraphNotBottomMargin">
         Payment — a payment for goods or
         services executed through the Internet with the use of a bank card. It
@@ -96,6 +96,9 @@ function Introduction({ CopyToClickBoard }) {
         <li>Refund</li>
         <li>Status Check</li>
       </ul>
+      <div className="paymentFlowContainer">
+        <img src={`${process.env.PUBLIC_URL}/assets/img/paymentFlow.svg`} alt="Payment Flow" />
+      </div>
     </div>
   );
 }

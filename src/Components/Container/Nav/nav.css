@@ -50,3 +50,33 @@
     box-shadow: 0px 1.6303679943084717px 3.623039960861206px 0px rgba(0, 0, 0, 0.02), 0px 4.507758617401123px 10.017241477966309px 0px rgba(0, 0, 0, 0.03), 0px 10.852946281433105px 24.117658615112305px 0px rgba(0, 0, 0, 0.03), 0px 36px 80px 0px rgba(0, 0, 0, 0.05);
     margin-bottom: 0.03rem;
 }
+
+.phpGithubRepo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 9.4375rem;
+    height: 2.5rem;
+    color: #FFF;
+    background-color: #F46602;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    text-decoration: none;
+}
+
+.phpGithubRepo:hover {
+    background-color: #DB5C03;
+
+}
+
+.border{
+    margin-top: 0.75rem;
+    display: flex;
+    width: 9.5625rem;
+    height: 2.5625rem;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top ,#CB581C, #F59A6B);
+    border-radius: 0.375rem;
+}

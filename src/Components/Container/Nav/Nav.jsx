@@ -40,15 +40,15 @@ function Nav() {
   return (
     <div className="nav">
       <div className="logo">
-        <a href="/">
+        <a href="/" >
           <img
-            src={`${process.env.PUBLIC_URL}/assets/img/logo2.svg`}
+            src={`${process.env.PUBLIC_URL}/assets/img/logo.svg`}
             alt="logo"
           />
         </a>
       </div>
 
-      <ul className="navList">
+      <ul className="navList" id="navList">
         <li className="navListItem active">
           <span className="icon"></span>
           <a id="introductionNavItem" href=" " onClick={(e) => scrollToComponent(e, 'introduction')}>Introduction</a>
@@ -82,6 +82,14 @@ function Nav() {
           <a id="fraudNavItem" href=" " onClick={(e) => scrollToComponent(e, 'fraud')}>Fraud rules</a>
         </li>
       </ul>
+
+      <div className="border" >
+        <a target="_blank" rel="noreferrer" href="https://github.com/GuavaPay/eCommerce-PHP-SDK" className="phpGithubRepo">
+          PHP Examples
+          <img src={`${process.env.PUBLIC_URL}/assets/img/githubLogo.svg`} alt="Github" />
+        </a>
+      </div>
+
     </div>
   );
 }

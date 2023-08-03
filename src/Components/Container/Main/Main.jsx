@@ -36,11 +36,12 @@ function Main() {
 
   //Function to Copy to Clickboard
   function CopyToClickBoard(elementId, urlToCopy) {
-    document.getElementById(elementId).onclick = (e) => {
+    document.getElementById(elementId).onclick = () => {
       navigator.clipboard.writeText(urlToCopy);
-      let notificationItem = document.getElementById(`${elementId}Notification`)
+
+      let notificationItem = document.getElementById(`${elementId}Notification`);
+
       notificationItem.style.display = "flex";
-      // notificationItem.innerHTML = "Copied";
 
       let parent = document.getElementById(elementId).parentElement;
 
@@ -61,7 +62,6 @@ function Main() {
       setTimeout(() => {
 
         notificationItem.style.display = "none";
-        // notificationItem.innerHTML = "";
 
         if (elementId === "copyIcon1") {
           parent.style.marginBottom = "1rem";
@@ -78,7 +78,7 @@ function Main() {
 
   return (
     <div id="main" className="main">
-      <h1 className="headerInfo">
+      <h1 className="headerInfo" id="headerInfo">
         E-commerce Payment Gateway API Specification
       </h1>
       <Introduction CopyToClickBoard={CopyToClickBoard} />

@@ -24,3 +24,13 @@
 #copyIcon2Notification{
     top: -34px;
 }
+
+.paymentFlowContainer{
+    width: 100%;
+    margin-left: -0.5rem;
+}
+
+.paymentFlowContainer > img{
+    width: 100%;
+}
+
