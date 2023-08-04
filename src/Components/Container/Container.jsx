@@ -21,7 +21,7 @@ function Container() {
   useEffect(() => {
     applyCustomStyles(mediaQuery);
       mediaQuery.addListener(applyCustomStyles);
-  },[]);
+  });
   
   return (
     <div className="container">
