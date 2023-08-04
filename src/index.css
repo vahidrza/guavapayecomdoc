@@ -16,6 +16,7 @@ body {
 }
 
 .componentParagraph {
+    width: 41.4375rem;
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
@@ -31,6 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 4.5rem;
+    width: 40.4375rem;
     background-color: #E3F5FF;
     border: 1px solid #70D5FF;
     border-radius: 0.75rem;
@@ -81,8 +83,8 @@ body {
     border-radius: 4px;
     position: relative;
     display: none;
-    /* left: 41.5rem;  */
-    left: 101%;
+    left: 42rem; 
+    /* left: 101%; */
     /* top: -64px;   */
     margin-bottom: auto;
 }
@@ -90,13 +92,16 @@ body {
 .tableContainer {
     border: 0.5px solid #BDC4CF;
     border-radius: 0.75rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: 1.5rem;
+    width: 41.4375rem;
 
 }
 
 .componentTable {
-    width: 100%;
+    width: 41.4375rem;
+    border-radius: 0.75rem;
+
 }
 
 .componentTable>thead>tr>td {
@@ -104,6 +109,14 @@ body {
     background-color: #ECEFF5;
     padding: 0.88rem 1rem;
     font-weight: 500;
+}
+
+.componentTable>thead>tr>td:first-child {
+    border-top-left-radius: 0.75rem;
+}
+
+.componentTable>thead>tr>td:last-child {
+    border-top-right-radius: 0.75rem;
 }
 
 .text-bold {
