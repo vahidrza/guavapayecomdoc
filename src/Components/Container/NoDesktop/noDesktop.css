@@ -22,6 +22,7 @@ background-size: cover;
     font-weight: 600;
     color: #152F5B;
     text-align: center;
+    line-height: 1.7rem !important;
 }
 
 .noDesktopMainContainer > img{
