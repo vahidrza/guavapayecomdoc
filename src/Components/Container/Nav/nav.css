@@ -15,7 +15,7 @@
 }
 
 .navListItem {
-    font-size: 1 rem !important;
+    font-size: 1rem !important;
     margin-bottom: 1.25rem;
     letter-spacing: 0.0165rem;
     line-height: 1.5rem;
@@ -70,13 +70,13 @@
 
 }
 
-.border{
+.border {
     margin-top: 0.75rem;
     display: flex;
     width: 9.5625rem;
     height: 2.5625rem;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to top ,#CB581C, #F59A6B);
+    background: linear-gradient(to top, #CB581C, #F59A6B);
     border-radius: 0.375rem;
 }
