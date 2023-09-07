@@ -1,5 +1,4 @@
-import React from "react";
-// import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import "./container.css";
 import Nav from "./Nav/Nav";
 import Main from "./Main/Main";
