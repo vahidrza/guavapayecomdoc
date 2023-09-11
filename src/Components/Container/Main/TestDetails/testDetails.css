@@ -1,0 +1,96 @@
+#cardCopyIcon1Notification {
+    position: relative;
+    margin-left: -445px;
+    bottom: 0.75rem;
+}
+
+#cardCopyIcon2Notification{
+    margin-left: -493px;
+    bottom: 0.8rem;
+}
+
+#cardCopyIcon3Notification{
+    margin-left: -553px;
+    bottom: 0.75rem;
+}
+
+#cardCopyIcon4Notification{
+    margin-left: -452px;
+    bottom: 0.75rem;
+}
+
+#cardCopyIcon5Notification{
+    margin-left: -506px;
+    bottom: 0.75rem;
+}
+
+#cardCopyIcon6Notification{
+    margin-left: -552px;
+    bottom: -0.25rem;
+}
+
+#cardCopyIcon7Notification{
+    margin-left: -454px;
+    bottom: 0.75rem;
+}
+
+#cardCopyIcon8Notification{
+    margin-left: -489px;
+    bottom: 0.75rem;
+}
+
+#cardCopyIcon9Notification{
+    margin-left: -558px;
+    bottom: 0.75rem;
+}
+
+#testingParagraph1{
+    font-weight: bold;
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+#testingParagraph2{
+    font-weight: bold;
+    display: flex;
+}
+
+#testingParagraph1 > div , #testingParagraph2 > div {
+    margin-right: 1rem;
+    flex: 0 0 auto; 
+}
+
+#testingParagraph2 > p {
+    flex: 1;
+}
+
+#greenText{
+    color: #26A711;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.green{
+    color: #26A711;
+    margin-bottom: 1rem;
+}
+
+.cardCopyIcon {
+    margin-left: 1.2rem;
+    margin-bottom: -7px;
+}
+
+.copyParagraph{
+    margin-bottom: 1rem;
+}
+
+.red{
+    color: #DA3B19;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.redText{
+    color: #DA3B19;
+}
