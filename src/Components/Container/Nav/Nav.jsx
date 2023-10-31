@@ -53,13 +53,9 @@ function Nav() {
           <span className="icon"></span>
           <a id="introductionNavItem" href=" " onClick={(e) => scrollToComponent(e, 'introduction')}>Introduction</a>
         </li>
-        
         <li className="navListItem">
           <span></span>
           <a id="registerorderNavItem" href=" " onClick={(e) => scrollToComponent(e, 'registerorder')} >Order registration</a>
-        </li><li className="navListItem">
-          <span></span>
-          <a id="testDetailsNavItem" href=" " onClick={(e) => scrollToComponent(e, 'testDetails')} >Test Details</a>
         </li>
         <li className="navListItem"><span></span>
           <a id="checkthreedsNavItem" href=" " onClick={(e) => scrollToComponent(e, 'checkthreeds')}>Check 3DS version</a>

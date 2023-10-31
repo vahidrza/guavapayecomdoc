@@ -10,7 +10,6 @@ import BalanceCheck from "./BalanceCheck/BalanceCheck";
 import MerchantNotificationService from "./MerchantNotificationService/MerchantNotificationService";
 import ListOfErrorCodes from "./ListOfErrorCodes/ListOfErrorCodes";
 import FraudRules from "./FraudRules/FraudRules";
-import TestDetails from "./TestDetails/TestDetails";
 
 function Main() {
   useEffect(() => {
@@ -58,14 +57,6 @@ function Main() {
         parent.style.marginBottom = "2px";
       }
 
-      else if (elementId === "cardCopyIcon1" || elementId === "cardCopyIcon2" || elementId === "cardCopyIcon3" || elementId === "cardCopyIcon4" || elementId === "cardCopyIcon5" || elementId === "cardCopyIcon9" || elementId === "cardCopyIcon7" || elementId === "cardCopyIcon8" ) {
-        parent.style.marginBottom = "-6px";
-      }
-
-      else if (elementId === "cardCopyIcon6"){
-        parent.style.marginBottom = "-1.38rem";
-      }
-
       else parent.style.marginBottom = "2px";
 
       setTimeout(() => {
@@ -79,16 +70,7 @@ function Main() {
         else if (elementId === "copyIcon2") {
           parent.style.marginBottom = "0.5rem";
         }
-
-        else if (elementId === "cardCopyIcon1" || elementId === "cardCopyIcon2" || elementId === "cardCopyIcon3" || elementId === "cardCopyIcon4" || elementId === "cardCopyIcon5" || elementId === "cardCopyIcon9" || elementId === "cardCopyIcon7" || elementId === "cardCopyIcon8") {
-          parent.style.marginBottom = "1rem";
-        }
-
-        else if (elementId === "cardCopyIcon6"){
-          parent.style.marginBottom = "0rem";
-        }
-        //|| 
-        else parent.style.marginBottom = "1rem";
+        else parent.style.marginBottom = "1.5rem";
 
       }, 500);
     };
@@ -101,7 +83,6 @@ function Main() {
       </h1>
       <Introduction CopyToClickBoard={CopyToClickBoard} />
       <OrderRegistrationRequest CopyToClickBoard={CopyToClickBoard} />
-      <TestDetails CopyToClickBoard={CopyToClickBoard} />
       <CheckThreedsVersionRequest CopyToClickBoard={CopyToClickBoard} />
       <PaymentRequest CopyToClickBoard={CopyToClickBoard} />
       <Refund />
