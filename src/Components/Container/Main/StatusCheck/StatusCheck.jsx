@@ -6,7 +6,7 @@ function StatusCheck({ CopyToClickBoard }) {
   useEffect(() => {
     CopyToClickBoard(
       "copyIcon6",
-      "https://{base_url} /transaction/013/status?user=apiuser&password=apiuserpassword&sid=900000&mdorder=eed077dc-cad0-4ed5-8a15-608ffc592173"
+      '{"user": "Username123","password": "password123","sid": "012345","orderId":"2baer63-576e-4356-9e3c-6680793d1409","bankCode": "013"}'
     );
   });
 
@@ -15,16 +15,18 @@ function StatusCheck({ CopyToClickBoard }) {
       <h1 className="componentHeading">Status Check</h1>
 
       <div className="method">Method:</div>
-      <div className="methodUrl">{"{base_url}/transaction/{code}/status"}</div>
+      <div className="methodUrl">{"{base_url}/transaction/status"}</div>
 
       <div id="copyArea11" className="copyArea">
         <div className="copyAreaContainer">
           <div className="copyAreaHeading">Request example:</div>
-          <div className="copyAreaUrl">
-            {
-              "https://{base_url}/transaction/013/status?user=apiuser&password=apiuserpassword&sid=900000&mdorder=eed077dc-cad0-4ed5-8a15-608ffc592173"
-            }
-          </div>
+          <div className="copyAreaUrl">{"{"}</div>
+          <div className="copyAreaUrl">{'"user": "Username123",'}</div>
+          <div className="copyAreaUrl">{'"password": "password123",'}</div>
+          <div className="copyAreaUrl">{'"sid": "012345",'}</div>
+          <div className="copyAreaUrl">{'"orderId": "2baer63-576e-4356-9e3c-6680793d1409",'}</div>
+          <div className="copyAreaUrl">{'"bankCode": "013"'}</div>
+          <div className="copyAreaUrl">{"}"}</div>
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon6" fontSize="small" />
       </div>
@@ -56,16 +58,23 @@ function StatusCheck({ CopyToClickBoard }) {
               <td>User's password</td>
             </tr>
             <tr>
-              <td>mdorder</td>
-              <td>ANS36</td>
-              <td>Yes</td>
-              <td>Unique order number in the E- commerce Payment Gateway.</td>
-            </tr>
-            <tr>
               <td>sid</td>
               <td>ANS99</td>
               <td>Yes</td>
               <td>TerminalID</td>
+            </tr>
+            <tr>
+              <td>orderId</td>
+              <td>ANS36</td>
+              <td>Yes</td>
+              <td>Unique order number in the E- commerce Payment Gateway.</td>
+            </tr>
+
+            <tr>
+              <td>bankCode</td>
+              <td>N3</td>
+              <td>Yes</td>
+              <td>Will be provided during integration</td>
             </tr>
           </tbody>
         </table>
@@ -94,6 +103,7 @@ function StatusCheck({ CopyToClickBoard }) {
           <div className="copyAreaUrl">"Pan": "500000**0000",</div>
           <div className="copyAreaUrl">"order_status": "2",</div>
           <div className="copyAreaUrl">{'"status": "DEPOSITED"}'}</div>
+          <div className="copyAreaUrl">{'"provider": "INTERNAL"}'}</div>
         </div>
       </div>
 
@@ -185,6 +195,12 @@ function StatusCheck({ CopyToClickBoard }) {
             <tr>
               <td>Pan</td>
               <td>N..19</td>
+              <td>No</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Provider</td>
+              <td>AN..32</td>
               <td>No</td>
               <td></td>
             </tr>

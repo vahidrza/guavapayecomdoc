@@ -6,7 +6,7 @@ function BalanceCheck({ CopyToClickBoard }) {
   useEffect(() => {
     CopyToClickBoard(
       "copyIcon7",
-      "https://{base_url}/merchant/013/balance?user={username}&password={password}&currency=840"
+      '{ "user": "Username123", "password": "password123", "currency": "978", "bankCode": "013", "from": "10.08.2023", "to": "29.09.2023" }'
     );
   });
 
@@ -15,16 +15,19 @@ function BalanceCheck({ CopyToClickBoard }) {
       <h1 className="componentHeading">Balance Check</h1>
 
       <div className="method">Method:</div>
-      <div className="methodUrl">{"{base_url}/transaction/{code}/balance"}</div>
+      <div className="methodUrl">{"{base_url}/transaction /balance"}</div>
 
       <div id="copyArea13" className="copyArea">
         <div className="copyAreaContainer">
           <div className="copyAreaHeading">Request example:</div>
-          <div className="copyAreaUrl">
-            {
-              "https://{base_url}/merchant/013/balance?user={username}&password={password}&currency=840"
-            }
-          </div>
+          <div className="copyAreaUrl">{"{"}</div>
+          <div className="copyAreaUrl">{'"user": "Username123",'}</div>
+          <div className="copyAreaUrl">{'"password": "password123",'}</div>
+          <div className="copyAreaUrl">{'"currency": "978",'}</div>
+          <div className="copyAreaUrl">{'"bankCode": "013",'}</div>
+          <div className="copyAreaUrl">{'"from": "10.08.2023"'}</div>
+          <div className="copyAreaUrl">{'"to": "29.09.2023"'}</div>
+          <div className="copyAreaUrl">{"}"}</div>
         </div>
         <ContentCopyIcon sx={{ fontSize: 16 }} className="copyIcon" id="copyIcon7" fontSize="small" />
       </div>
@@ -56,10 +59,28 @@ function BalanceCheck({ CopyToClickBoard }) {
               <td>User's password</td>
             </tr>
             <tr>
-              <td>mdorder</td>
-              <td>ANS36</td>
+              <td>currency</td>
+              <td>N3</td>
               <td>Yes</td>
-              <td>Unique order number in the E- commerce Payment Gateway.</td>
+              <td>Payment currency in the ISO 4217 format.</td>
+            </tr>
+            <tr>
+              <td>bankCode</td>
+              <td>N3</td>
+              <td>Yes</td>
+              <td>Will be provided during integration</td>
+            </tr>
+            <tr>
+              <td>from</td>
+              <td>DD.MM.YYYY</td>
+              <td>Yes</td>
+              <td>Start Date</td>
+            </tr>
+            <tr>
+              <td>to</td>
+              <td>DD.MM.YYYY</td>
+              <td>Yes</td>
+              <td>End Date</td>
             </tr>
           </tbody>
         </table>
