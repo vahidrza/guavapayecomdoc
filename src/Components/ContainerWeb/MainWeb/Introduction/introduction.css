@@ -1,0 +1,36 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+}
+
+.introductionList {
+    list-style: disc;
+    margin-left: 1.4rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+#copyArea1 {
+    margin-bottom: 1rem;
+}
+
+#copyArea2 {
+    margin-bottom: 0.5rem;
+}
+
+#copyIcon1Notification{
+    top: -42px;
+}
+#copyIcon2Notification{
+    top: -34px;
+}
+
+.paymentFlowContainer{
+    width: 100%;
+    margin-left: -0.5rem;
+}
+
+.paymentFlowContainer > img{
+    width: 41.5625rem;
+}
+

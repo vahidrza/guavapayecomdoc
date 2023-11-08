@@ -1,0 +1,19 @@
+#copyArea3 {
+    height: 11rem;
+    /* width: 97.5%; */
+    overflow-wrap: break-word;
+    margin-bottom: 1.5rem;
+}
+
+#copyArea4 {
+    height: 8.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#copyIcon3 {
+    margin-top: -7rem;
+}
+
+#copyIcon3Notification{
+    top: -157.5px;
+}

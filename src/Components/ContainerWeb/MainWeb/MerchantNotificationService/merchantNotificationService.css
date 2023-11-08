@@ -1,0 +1,24 @@
+.callbackList {
+    list-style: number;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+#copyArea15 {
+    height: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+#copyArea16 {
+    height: 45rem;
+    overflow-wrap: break-word;
+    margin-bottom: 1.5rem;
+}
+
+#copyIcon8 {
+    margin-top: -5rem;
+}
+
+#copyIcon8Notification{
+    top: -134px;
+}

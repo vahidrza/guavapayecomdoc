@@ -1,10 +1,10 @@
 import "./App.css";
-import Container from "./Components/Container/Container";
+import WebApi from "./Components/WebApi/WebApi";
 
 function App() {
   return (
     <div className="App">
-      <Container />
+      <WebApi />
     </div>
   );
 }

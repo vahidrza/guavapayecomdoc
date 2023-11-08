@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    max-height: 95.5vh;
+    overflow-y: scroll;
+    flex-direction: column;
+    margin-left: 20.5%;
+    width: 78.3%;
+    background-color: #FFF;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    right: 1rem;
+    color: #152F5B;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.headerInfo {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    /* font-weight: 600; */
+    flex-grow: 10;
+    font-weight: 500;
+    margin-left: 10%;
+    padding-top: 1.375rem;
+}
+

@@ -1,0 +1,26 @@
+#copyArea5 {
+    height: 11.9375rem;
+    /* width: 97.5%; */
+    overflow-wrap: break-word;
+    margin-bottom: 1.5rem;
+}
+
+#copyArea6 {
+    margin-bottom: 1.5rem;
+}
+
+#copyArea7 {
+    height: 11rem;
+}
+
+#copyArea7 .copyAreaContainer {
+    width: 100%;
+}
+
+#copyIcon4 {
+    margin-top: -7rem;
+}
+
+#copyIcon4Notification{
+    top: -165px;
+}
