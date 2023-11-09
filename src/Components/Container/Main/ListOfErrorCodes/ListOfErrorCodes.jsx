@@ -115,7 +115,7 @@ function ListOfErrorCodes() {
             <tr>
               <td>-100</td>
               <td>No payment attempted yet.</td>
-              <td>SUCCESS</td>
+              <td>CREATED</td>
             </tr>
 
             <tr>
