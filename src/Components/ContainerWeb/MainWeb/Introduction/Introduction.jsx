@@ -82,23 +82,9 @@ function Introduction({ CopyToClickBoard }) {
       </div>
 
       <p className="componentParagraph componentParagraphNotBottomMargin">
-        Payment — a payment for goods or
-        services executed through the Internet with the use of a bank card. It
-        is executed as one action that does not require additional confirmation.
-        Order of the requests is described below:
+        
       </p>
 
-      <ul className="introductionList">
-        <li>Order registration request</li>
-        <li>Payment request</li>
-        <li>ACS</li>
-        <li>Finish 3DS Payment Request</li>
-        <li>Refund</li>
-        <li>Status Check</li>
-      </ul>
-      <div className="paymentFlowContainer">
-        <img src={`${process.env.PUBLIC_URL}/assets/img/paymentFlow.svg`} alt="Payment Flow" />
-      </div>
     </div>
   );
 }

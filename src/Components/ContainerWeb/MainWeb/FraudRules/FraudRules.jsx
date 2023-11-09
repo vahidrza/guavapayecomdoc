@@ -209,6 +209,10 @@ function FraudRules() {
               <td>Trasaction refused by fraud. &#8211; 3 then block 24 hour</td>
             </tr>
             <tr>
+              <td>2001</td>
+              <td>Declined by Fraud Monitoring</td>
+            </tr>
+            <tr>
               <td>2002</td>
               <td>Invalid operation &#8211; 3 then block 24 hour</td>
             </tr>

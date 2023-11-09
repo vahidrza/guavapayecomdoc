@@ -238,6 +238,12 @@ function ListOfErrorCodes() {
               <td>Original transaction not found</td>
               <td>ERROR</td>
             </tr>
+            
+            <tr>
+              <td>2001</td>
+              <td>Declined by Fraud Monitoring</td>
+              <td>ERROR</td>
+            </tr>
 
             <tr>
               <td>2002</td>
