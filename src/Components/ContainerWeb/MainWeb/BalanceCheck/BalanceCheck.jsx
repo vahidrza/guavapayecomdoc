@@ -15,7 +15,7 @@ function BalanceCheck({ CopyToClickBoard }) {
       <h1 className="componentHeading">Balance Check</h1>
 
       <div className="method">Method:</div>
-      <div className="methodUrl">{"{base_url}/transaction /balance"}</div>
+      <div className="methodUrl">{"{base_url}/transaction/balance"}</div>
 
       <div id="copyArea13" className="copyArea">
         <div className="copyAreaContainer">

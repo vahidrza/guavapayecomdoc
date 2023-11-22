@@ -15,7 +15,7 @@ function StatusCheck({ CopyToClickBoard }) {
       <h1 className="componentHeading">Status Check</h1>
 
       <div className="method">Method:</div>
-      <div className="methodUrl">{"{base_url}/transaction/status"}</div>
+      <div className="methodUrl">{"{base_url}/transaction/status/v2"}</div>
 
       <div id="copyArea11" className="copyArea">
         <div className="copyAreaContainer">
